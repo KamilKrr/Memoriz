@@ -1,5 +1,33 @@
 "use-strict";
 
+/**
+ * Gets all card ids
+ * @type {Array}
+ */
+let getCard = [];
+
+/**
+ * Array with all card objects
+ * @type {Array}
+ */
+let cardArray = [];
+
+
+function init(){
+    createMemory();
+    
+    for (let i = 0; i < 16; i++) {
+        getCard.push(document.getElementById('card'+(i+1)));
+    }
+
+    
+    for (let i = 0; i < 16; i++) {
+        cardArray.push(new Card('card'+(i+1),false, getCard[i]));
+    }
+}
+
+document.addEventListener("DOMContentLoaded", init);
+
 class Card {
     constructor(name, isOpen, card){
         this.name = name;
@@ -41,26 +69,6 @@ class Game {
 }
 
 
-/**
- * Gets all card ids
- * @type {Array}
- */
-let getCard = [];
-
-for (let i = 0; i < 16; i++) {
-    getCard.push(document.getElementById('card'+(i+1)));
-}
-
-/**
- * Array with all card objects
- * @type {Array}
- */
-let cardArray = [];
-for (let i = 0; i < 16; i++) {
-    cardArray.push(new Card('card'+(i+1),false, getCard[i]));
-}
-
-
 let pairs = {
     1 : 12,
     2 : 13,
@@ -80,6 +88,56 @@ let pairs = {
     16 : 9,
 };
 
+function createMemoryCard(id){
+
+    id = Number(id);
+
+    let memoryCard = document.createElement("div");
+    memoryCard.className = "cardHolder";
+    memoryCard.id = "cardHolder" + id;
+    memoryCard.addEventListener("click", function(){
+        turn(id);
+    });
+
+    let card = document.createElement("div");
+    card.className = "card";
+    card.id = "card" + id;
+
+    let par = document.createElement("p");
+    let content = document.createTextNode(id);
+
+    par.appendChild(content);
+    card.appendChild(par);
+    memoryCard.appendChild(card);
+
+    return memoryCard;
+}
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
+
+function createMemory(){
+    let ids = [];
+
+    for (let val in pairs) {
+        if (Object.prototype.hasOwnProperty.call(pairs, val)) {
+            ids.push(val);
+        }
+    }
+
+    shuffle(ids);
+
+    let field = document.querySelector("#cardBoard");
+    for (let i = 0; i < ids.length; i++) {
+        let card = createMemoryCard(ids[i]);
+        field.appendChild(card);
+    }
+}
+
+
+
+
 let game = new Game(cardArray, 0, 0, 0,0);
 
 let turnedCards = [];
@@ -97,9 +155,12 @@ function turn(id) {
         turnedCards.push(id);
         if (turnedCards.length !== 0 && turnedCards.length%2 === 0){
             if (checkCards(turnedCards[turnedCards.length-1], turnedCards[turnedCards.length-2])){
+
+                let card1 = turnedCards[turnedCards.length-1];
+                let card2 = turnedCards[turnedCards.length-2];
                 setTimeout(() => {
-                    cardArray[turnedCards[turnedCards.length-1]-1].card.classList.add("correctCard");
-                    cardArray[turnedCards[turnedCards.length-2]-1].card.classList.add("correctCard");
+                    cardArray[card1-1].card.classList.add("correctCard");
+                    cardArray[card2-1].card.classList.add("correctCard");
                 }, 400);
                 game.addCorrect();
                 document.getElementById("correct").querySelectorAll("span")[0].innerHTML = game.getCorrects();
