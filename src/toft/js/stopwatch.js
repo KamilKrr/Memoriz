@@ -81,8 +81,9 @@ function update() {
     $time.innerHTML = formatTime(x.time());
 }
 
+
 function start() {
-    clocktimer = setInterval("update()", 1);
+    clocktimer = setInterval(update, 1);
     x.start();
 }
 

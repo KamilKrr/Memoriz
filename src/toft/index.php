@@ -16,7 +16,7 @@
 </head>
 
 <body onload="show();">
-<div class="field" onclick="start()">
+<div class="field">
   <div class="field-center" id="cardBoard">
   </div>
 </div>
@@ -26,7 +26,7 @@
 
   </div>
   <div class="logo">
-    <img src="resources/logo_purpleish.png">
+    <img src="/src/toft/resources/logo_purpleish.png">
   </div>
   <div class="menu">
     <div>
@@ -48,7 +48,7 @@
   <div class="bottom">
     <div class="turns" id="turns">
       <span>0</span>
-      <span>Turns</span>
+      <span>Züge</span>
     </div>
     <div class="trys">
       <span>0</span>
@@ -61,8 +61,8 @@
   </div>
 
 </div>
-<script src="/src/toft/js/main.js"></script>
 <script src="/src/toft/js/stopwatch.js"></script>
+<script src="/src/toft/js/main.js"></script>
 </body>
 
 </html>

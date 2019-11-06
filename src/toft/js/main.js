@@ -12,6 +12,8 @@ let getCard = [];
  */
 let cardArray = [];
 
+let gameStarted = false;
+
 
 function init(){
     createMemory();
@@ -24,6 +26,17 @@ function init(){
     for (let i = 0; i < 16; i++) {
         cardArray.push(new Card('card'+(i+1),false, getCard[i]));
     }
+
+    document.querySelector(".menu").addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("dark");
+    });
+
+    document.querySelector(".field").addEventListener("click", function(){
+        if(!gameStarted){
+            start();
+            gameStarted = true;
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", init);
@@ -68,24 +81,43 @@ class Game {
     }
 }
 
+let cardContent = {
+    1: "Abteilungen",
+    2: "Informatik, Mechatonik, Fachschule",
+    3: "Direktor",
+    4: "<img src='https://www.htl.rennweg.at/wp-content/uploads/2018/09/AK00287431.jpg'>",
+    5: "So viele Schüler gibt es",
+    6: "1058",
+    7: "Kooperations-partner",
+    8: "Wiener Linien, Simens, EVVA",
+    9: "Leckeres und günstiges Essen",
+    10: "Schulkantine",
+    11: "Programmier-sprachen",
+    12: "JAVA, PHP, Javascipt",
+    13: "HTL For Future",
+    14: "<img src='https://www.htl.rennweg.at/wp-content/uploads/2019/10/thumbnail_312_NikonFM2n_09_2019_28.jpg'>",
+    15: "Ich entscheide mich für...",
+    16: "... Die HTL Rennweg"
+}
+
 
 let pairs = {
-    1 : 12,
-    2 : 13,
-    3 : 7,
-    4 : 14,
-    5 : 11,
-    6 : 8,
-    7 : 3,
-    8 : 6,
-    9 : 16,
-    10 : 15,
-    11 : 5,
-    12 : 1,
-    13 : 2,
-    14 : 4,
-    15 : 10,
-    16 : 9,
+    1 : 2,
+    2 : 1,
+    3 : 4,
+    4 : 3,
+    5 : 6,
+    6 : 5,
+    7 : 8,
+    8 : 7,
+    9 : 10,
+    10 : 9,
+    11 : 12,
+    12 : 11,
+    13 : 14,
+    14 : 13,
+    15 : 16,
+    16 : 15,
 };
 
 function createMemoryCard(id){
@@ -104,9 +136,8 @@ function createMemoryCard(id){
     card.id = "card" + id;
 
     let par = document.createElement("p");
-    let content = document.createTextNode(id);
+    par.innerHTML = cardContent[id];
 
-    par.appendChild(content);
     card.appendChild(par);
     memoryCard.appendChild(card);
 
@@ -153,6 +184,7 @@ function turn(id) {
         document.getElementById("turns").querySelectorAll("span")[0].innerHTML = game.getTurns();
 
         turnedCards.push(id);
+        
         if (turnedCards.length !== 0 && turnedCards.length%2 === 0){
             if (checkCards(turnedCards[turnedCards.length-1], turnedCards[turnedCards.length-2])){
 
@@ -164,8 +196,12 @@ function turn(id) {
                 }, 400);
                 game.addCorrect();
                 document.getElementById("correct").querySelectorAll("span")[0].innerHTML = game.getCorrects();
+
+                if(Number(game.getCorrects()) >= 8){
+                    stop();
+                }
             }else {
-                console.log("pairs don't match");
+                //console.log("pairs don't match");
                 turnBack(turnedCards[turnedCards.length-1], turnedCards[turnedCards.length-2]);
             }
         }
@@ -177,12 +213,12 @@ function turnBack(id1, id2) {
     setTimeout(() => {
         cardArray[id1-1].card.classList.add("wiggle");
         cardArray[id2-1].card.classList.add("wiggle");
-    }, 600);
+    }, 200);
 
     setTimeout(() => {
         cardArray[id1-1].card.classList.remove("wiggle");
         cardArray[id2-1].card.classList.remove("wiggle");
-    }, 1800);
+    }, 1200);
 
 
     setTimeout(() => {
@@ -194,8 +230,9 @@ function turnBack(id1, id2) {
         cardArray[id2-1].card.classList.remove("cardVisible");
         cardArray[id2-1].isOpen = false;
 
-    }, 2800);
+    }, 1300);
 }
+
 
 function checkCards(card1, card2) {
     return card1 == pairs[card2].toString() && card2 == pairs[card1].toString();
