@@ -1,16 +1,30 @@
 <?php
 
-$path = ltrim($_SERVER['REQUEST_URI'], '/');
-$elements = explode('/', $path);
-if(empty($elements[0])) {
-    header("Location: /toft");
-} else switch(array_shift($elements))
-{
-    case 'home':
-        header("Location: /home");
-        break;
-    default:
-        header('HTTP/1.1 404 Not Found');
+define( 'INCLUDE_DIR', dirname( __FILE__ ) . '/src/' );
+
+$rules = array(
+    'toft/index'=> "/toft",
+    'home/index'=> "/"
+);
+
+$uri = rtrim( dirname($_SERVER["SCRIPT_NAME"]), '/' );
+$uri = '/' . trim( str_replace( $uri, '', $_SERVER['REQUEST_URI'] ), '/' );
+$uri = urldecode( $uri );
+
+
+foreach ( $rules as $action => $rule ) {
+    if ( preg_match( '~^'.$rule.'$~i', $uri, $params ) ) {
+        /* now you know the action and parameters so you can 
+         * include appropriate template file ( or proceed in some other way )
+         */
+        
+        include( INCLUDE_DIR . $action . '.php' );
+
+        // exit to avoid the 404 message 
+        exit();
+    }
 }
 
+
+include( INCLUDE_DIR . '404.php' );
 ?>

@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/src/toft/css/normalize.css">
+  <link rel="stylesheet" href="/src/toft/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
 
@@ -61,8 +61,8 @@
   </div>
 
 </div>
-<script src="js/main.js"></script>
-<script src="js/stopwatch.js"></script>
+<script src="/src/toft/js/main.js"></script>
+<script src="/src/toft/js/stopwatch.js"></script>
 </body>
 
 </html>
