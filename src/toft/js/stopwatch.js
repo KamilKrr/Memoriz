@@ -50,6 +50,7 @@ var	clsStopwatch = function() {
 
 var x = new clsStopwatch();
 var $time;
+var $time2;
 var clocktimer;
 
 function pad(num, size) {
@@ -74,11 +75,13 @@ function formatTime(time) {
 
 function show() {
     $time = document.getElementById('time');
+    $time2 = document.getElementById('time2');
     update();
 }
 
 function update() {
     $time.innerHTML = formatTime(x.time());
+    $time2.innerHTML = formatTime(x.time());
 }
 
 

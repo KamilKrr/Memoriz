@@ -83,21 +83,21 @@ class Game {
 
 let cardContent = {
     1: "Abteilungen",
-    2: "Informatik, Mechatonik, Fachschule",
+    2: "Informatik, Mechatronik, Fachschule",
     3: "Direktor",
     4: "<img src='https://www.htl.rennweg.at/wp-content/uploads/2018/09/AK00287431.jpg'>",
     5: "So viele Schüler gibt es",
     6: "1058",
-    7: "Kooperations-partner",
-    8: "Wiener Linien, Simens, EVVA",
+    7: "Kooperations-Partner",
+    8: "Wiener Linien, Siemens, EVVA",
     9: "Leckeres und günstiges Essen",
     10: "Schulkantine",
-    11: "Programmier-sprachen",
-    12: "JAVA, PHP, Javascipt",
+    11: "Programmier-Sprachen",
+    12: "JAVA, PHP, Javascript",
     13: "HTL For Future",
     14: "<img src='https://www.htl.rennweg.at/wp-content/uploads/2019/10/thumbnail_312_NikonFM2n_09_2019_28.jpg'>",
     15: "Ich entscheide mich für...",
-    16: "... Die HTL Rennweg"
+    16: "... die HTL Rennweg"
 }
 
 
@@ -199,6 +199,13 @@ function turn(id) {
 
                 if(Number(game.getCorrects()) >= 8){
                     stop();
+                    setTimeout(() => {
+                        document.getElementById("gamecomplete").classList.toggle("hide");
+                        //Import Confetti
+                        var imported = document.createElement("script");    
+                        imported.src = "/src/toft/js/particles.js";
+                        document.getElementsByTagName("head")[0].appendChild(imported);
+                    }, 1000); 
                 }
             }else {
                 //console.log("pairs don't match");

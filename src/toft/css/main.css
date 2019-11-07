@@ -4,10 +4,10 @@ html,body{
 }
 
 body.dark{
-  background-color: #000d1e;
+  background-color: #220027;
 }
 
-body{
+.content{
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -82,6 +82,7 @@ body{
   text-align: center;
   visibility: hidden;
   word-wrap: break-word;
+  overflow: hidden;
 }
 
 .card > p > img{
@@ -245,6 +246,70 @@ body{
   }
 }
 
+#gamecomplete{
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#gamecomplete > div{
+  width: 60vw;
+  height: 80vh;
+  margin: 10vh 20vw 10vh 20vw;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 1vw;
+  text-align: center;
+  z-index: 10;
+}
+
+#gamecomplete > div > h2{
+  padding-top: 5vh;
+  font-size: 3em;
+  color: #330080;
+}
+
+#gamecomplete > div > p{
+  padding: 2vh;
+  font-size: 1.5em;
+  margin: 0 2vw 0 2vw;
+}
+
+#gamecomplete > div > button{
+  width: 12vw;
+  height: 4vw;
+  margin-top: 6vw;
+  border-radius: 2vw;
+  font-size: 1.2em;
+  border: 2px solid #330080;
+  color: #330080;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+#gamecomplete > div > button:hover{
+  background-color: #330080;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.hide{
+  visibility: hidden;
+}
+
+/** confetti canvas */
+#particle-canvas {
+  display: block; 
+  position: fixed;
+  pointer-events: none; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%;
+  z-index: 4;
+}
 
 
 
