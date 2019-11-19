@@ -1,0 +1,9 @@
+.teammembers{
+    padding: 10vh;
+}
+
+.teammembers > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
