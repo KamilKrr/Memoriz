@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="/">Impressum</a></li>
                     <li><a href="/">Kontakt</a></li>
-                    <li><a href="/">Team</a></li>
+                    <li><a href="https://memoriz.it/team">Team</a></li>
                     <li><a href="/">Schule</a></li>
                     <li><a href="/">Projekt</a></li>
                 </ul>

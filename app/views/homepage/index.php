@@ -2,12 +2,12 @@
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
-                Memoriz: eine Memory-basierte Lernplattform
+                <b>Bald verfügbar!</b><br>Memoriz: eine Memory-basierte Lernplattform
             </h1>
             <h2 class="subtitle">
                 Lerne jetzte für deine nächsten Tests mit <strong>Memoriz</strong>!
             </h2>
-            <button class="button is-medium is-primary is-inverted is-outlined">Loslegen</button>
+            <a href="https://memoriz.it/toft"><button class="button is-medium is-primary is-inverted is-outlined">Loslegen</button></a>
         </div>
     </div>
 </section>
