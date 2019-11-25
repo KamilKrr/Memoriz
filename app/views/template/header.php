@@ -21,7 +21,8 @@
     <script src="/public/js/app.js"></script>
 
     <!--Bulma-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="/public/css/mystyles.css">
 
     <!--Font Awesome-->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
