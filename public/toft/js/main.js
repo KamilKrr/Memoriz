@@ -202,7 +202,7 @@ function turn(id) {
                         document.getElementById("gamecomplete").classList.toggle("hide");
                         //Import Confetti
                         var imported = document.createElement("script");    
-                        imported.src = "/src/toft/js/particles.js";
+                        imported.src = "/public/toft/js/particles.js";
                         document.getElementsByTagName("head")[0].appendChild(imported);
                     }, 1000); 
                 }
