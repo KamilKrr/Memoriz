@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/public/toft/css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
-<section class="section" id="maingame">
+<section id="maingame">
     <div id="gamecomplete" class="hide">
         <div>
             <h2>Herzlichen Glückwunsch</h2>
@@ -14,13 +14,32 @@
             <button type="submit" value="Neustart" onClick="window.location.reload();">Neustart</button>
         </div>
     </div>
-    <div class="content">
+    <div class="contentMem">
         <div class="field">
             <div class="field-center" id="cardBoard">
             </div>
         </div>
         <div class="stats">
+<<<<<<< Updated upstream
         
+=======
+            <div class="navbarMem">
+                <div class="login">
+
+                </div>
+                <div class="logo">
+                    <img src="/public/images/memoriz_logo.png">
+                </div>
+                <div class="menu">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+>>>>>>> Stashed changes
 
             <div class="center">
                 <span>Tag der offenen Tür</span>

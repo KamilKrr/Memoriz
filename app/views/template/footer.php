@@ -1,6 +1,6 @@
     <footer class="footer">
-        <div class="container is-widescreen columns">
-            <div class="column">
+        <div class="columns is-centered">
+            <div class="column is-one-quarter">
                 <p class="title is-4 is-spaced">Über</p>
                 <hr>
                 <p>
@@ -9,7 +9,7 @@
                     Die Lernplattform wird als Projektarbeit im Wintersemester 2019 entwickelt.
                 </p>
             </div>
-            <div class="column">
+            <div class="column is-one-quarter">
                 <p class="title is-4 is-spaced">
                     Links
                 </p>
@@ -22,7 +22,7 @@
                     <li><a href="/">Projekt</a></li>
                 </ul>
             </div>
-            <div class="column">
+            <div class="column is-one-quarter">
                 <p class="title is-4 is-spaced">Kontakt</p>
                 <hr>
                 <div class="columns is-mobile">

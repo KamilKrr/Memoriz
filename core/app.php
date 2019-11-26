@@ -57,8 +57,8 @@ class App{
             $this->require('/app/controllers/homepage.php');
             $homepage = new Homepage();
         }else{
-            $this->require('/app/controllers/Error404.php');
-            $error = new Error404();
+            $this->require('/app/controllers/error404.php');
+            $errorPage = new Error404();
         }
     }
 

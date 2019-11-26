@@ -22,17 +22,19 @@
             und bereite dich somit vor für deine nächste Schularbeit, Test oder Stundenwiederholung
         </p>
 
-        <button class="button is-primary is-outlined">Spielen</button>
+        <a href="https://memoriz.it/toft"><button class="button is-primary is-outlined">Spielen</button></a>
     </div>
 </section>
 <section class="section">
     <div class="container">
         <h1 class="title">Erstellen</h1>
         <h2 class="subtitle">
-        Ein Thema das fehlt? Kein Problem! <strong>Erstelle jetzt dein eigenes Memoryset</strong>
+        Ein Thema das fehlt? Kein Problem! <strong>Erstelle jetzt dein eigenes Memoryset</strong> und übe so lange und oft wie du willst!
         </h2>
         <p>
-            Erstelle dein eigenes Memoryset und spiele es immer und überall durch einen von uns generierten persönlichen Link
+            Erstelle dein eigenes Memoryset und spiele es immer und überall durch einen von uns generierten persönlichen Link.
+            <br>
+            Teile diesen Link mit andrenen damit auch Sie durch dein Memory lernen können.
         </p>
         
         <button class="button is-primary is-outlined">Erstellen</button>

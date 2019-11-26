@@ -45,11 +45,11 @@
 
         <div id="MemorizNavbar" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item is-active">
+                <a href="https://memoriz.it/" class="navbar-item is-active">
                     Startseite
                 </a>
 
-                <a class="navbar-item">
+                <a href="https://memoriz.it/toft" class="navbar-item">
                     Spielen
                 </a>
 

@@ -29,7 +29,7 @@ function init(){
     }
 
     document.querySelector(".menu").addEventListener("click", function(){
-        document.querySelector("body").classList.toggle("dark");
+        document.querySelector("#maingame").classList.toggle("dark");
     });
 
     document.querySelector(".field").addEventListener("click", function(){
