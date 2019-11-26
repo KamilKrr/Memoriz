@@ -35,7 +35,7 @@ function init(){
         }
     });
 
-    document.getElementById("maingame").scrollIntoView();
+    //document.getElementById("maingame").scrollIntoView();
 }
 
 document.addEventListener("DOMContentLoaded", init);
