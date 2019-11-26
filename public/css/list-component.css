@@ -1,0 +1,26 @@
+.list-component{
+    border-bottom: 1px solid darkgray;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.list-component:hover{
+    background-color: rgb(248, 248, 248);
+}
+
+.dropdown-arrow{
+    
+}
+
+.dropdown-arrow:hover{
+    color: black;
+}
+
+.info{
+    margin-left: 5px;
+}
+
+.dropdown{
+    margin-bottom: 10px;
+    cursor: text;
+}
