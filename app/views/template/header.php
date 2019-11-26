@@ -45,15 +45,15 @@
 
         <div id="MemorizNavbar" class="navbar-menu">
             <div class="navbar-start">
-                <a href="https://memoriz.it/" class="navbar-item is-active">
+                <a href="https://memoriz.it/" class="navbar-item <?php echo($page == 'startseite' ? 'is-active' : '')?>">
                     Startseite
                 </a>
 
-                <a href="https://memoriz.it/toft" class="navbar-item">
+                <a href="https://memoriz.it/toft" class="navbar-item <?php echo($page == 'spielen' ? 'is-active' : '')?>">
                     Spielen
                 </a>
 
-                <a class="navbar-item">
+                <a class="navbar-item <?php echo($page == 'erstellen' ? 'is-active' : '')?>">
                     Erstellen
                 </a>
             </div>

@@ -2,7 +2,10 @@
 
 class Toft extends Controller{
     function Index(){
-        $this->view('template/header');
+        $baseInfo = array(
+            'page' => 'spielen'
+        );
+        $this->view('template/header', $baseInfo);
         $this->view('toft/index');
         $this->view('template/footer');
     }
