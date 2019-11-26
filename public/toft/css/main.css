@@ -1,19 +1,20 @@
-#maingame{
+html,
+body {
   background-color: #e7e7e7;
 
 }
 
-#maingame.dark{
+body.dark {
   background-color: #220027;
 }
 
-.contentMem{
+.contentMem {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 
-.field{
+.field {
   position: relative;
   width: 60vw;
   height: 100vh;
@@ -27,14 +28,14 @@
 
 }
 
-.field-center{
+.field-center {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 46.8vw;
 }
 
-.stats{
+.stats {
   position: relative;
   background-color: #ffffff;
   width: 40vw;
@@ -47,7 +48,7 @@
   justify-content: center;
 }
 
-.cardHolder{
+.cardHolder {
   height: 10.5vw;
   width: 10.5vw;
   padding: .6vw;
@@ -55,7 +56,7 @@
 }
 
 
-.card{
+.card {
   width: 100%;
   height: 100%;
   top: 0;
@@ -73,7 +74,7 @@
   transition: all .3s;
 }
 
-.card > p{
+.card>p {
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -85,13 +86,13 @@
   overflow: hidden;
 }
 
-.card > p > img{
+.card>p>img {
   padding: 5%;
   max-width: 90%;
   max-height: 90%;
 }
 
-.card:hover{
+.card:hover {
 
   padding: .3vw;
   left: -.3vw;
@@ -100,25 +101,26 @@
   transition: 0.3s;
 }
 
-.flip{
+.flip {
   transform: rotateY(180deg);
   background-size: 0 0;
 }
 
-.correctCard{
+.correctCard {
   transition-delay: 1s;
   transition: .3s;
   opacity: 0.5;
 }
 
 
-.center{
+.center {
   width: 100%;
   text-align: center;
   font-size: 2.5vw;
   font-weight: bold;
 }
-.clock{
+
+.clock {
   font-family: 'Cutive Mono', monospace;
   margin-top: 2vh;
   font-weight: normal;
@@ -126,7 +128,7 @@
   color: #14E4D6;
 }
 
-.bottom{
+.bottom {
   width: 100%;
   height: 20vh;
   position: absolute;
@@ -136,7 +138,7 @@
   font-size: 1.5em;
 }
 
-.bottom > div{
+.bottom>div {
   width: 100%;
   height: 100%;
   display: flex;
@@ -145,17 +147,17 @@
   align-items: center;
 }
 
-.bottom > div > span:nth-child(1){
+.bottom>div>span:nth-child(1) {
   font-size: 2.5em;
   font-weight: bold;
   font-family: 'Cutive Mono', monospace;
 }
 
-.bottom > div > span:nth-child(2){
+.bottom>div>span:nth-child(2) {
   color: #330080;
 }
 
-.cardVisible > p{
+.cardVisible>p {
   visibility: visible;
   transition-delay: .1s;
   transform: rotateY(180deg);
@@ -167,24 +169,30 @@
 
 
 @keyframes wiggle {
-  10%, 90% {
+
+  10%,
+  90% {
     transform: translate(-1px, 0) rotateY(180deg);
   }
 
-  20%, 80% {
+  20%,
+  80% {
     transform: translate(2px, 0) rotateY(180deg);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate(-4px, 0) rotateY(180deg);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate(4px, 0) rotateY(180deg);
   }
 }
 
-#gamecomplete{
+#gamecomplete {
   z-index: 8;
   position: absolute;
   top: 0;
@@ -192,7 +200,7 @@
   background-color: rgba(0, 0, 0, .4);
 }
 
-#gamecomplete > div{
+#gamecomplete>div {
   width: 60vw;
   height: 80vh;
   margin: 10vh 20vw 10vh 20vw;
@@ -203,19 +211,19 @@
   z-index: 10;
 }
 
-#gamecomplete > div > h2{
+#gamecomplete>div>h2 {
   padding-top: 5vh;
   font-size: 3em;
   color: #330080;
 }
 
-#gamecomplete > div > p{
+#gamecomplete>div>p {
   padding: 2vh;
   font-size: 1.5em;
   margin: 0 2vw 0 2vw;
 }
 
-#gamecomplete > div > button{
+#gamecomplete>div>button {
   width: 12vw;
   height: 4vw;
   margin-top: 6vw;
@@ -227,74 +235,77 @@
   background-color: #ffffff;
 }
 
-#gamecomplete > div > button:hover{
+#gamecomplete>div>button:hover {
   background-color: #330080;
   color: #ffffff;
   transition: .3s;
 }
 
-.hide{
+.hide {
   visibility: hidden;
 }
 
 /** confetti canvas */
 #particle-canvas {
-  display: block; 
+  display: block;
   position: fixed;
-  pointer-events: none; 
-  left: 0; 
-  top: 0; 
-  width: 100%; 
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 100%;
   z-index: 4;
 }
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
 
-.section{
-  padding: 0;
-  padding-top: 4vw;
-}
+  .contentMem {
+    flex-direction: column;
+  }
 
-.content{
-  flex-direction: column;
-  width: 100vw;
-}
-  .field{
+  .section {
+    padding: 0;
+    padding-top: 4vw;
+  }
+
+  .content {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .field {
     width: 100%;
     height: 80%;
   }
 
-  .field-center{
+  .field-center {
     max-width: 96vw;
   }
 
-  .cardHolder{
+  .cardHolder {
     width: 24vw;
     height: 24vw;
     padding: 1vw;
     font-size: 3vw;
     -ms-user-select: None;
     -moz-user-select: None;
-    -webkit-user-select: None; 
+    -webkit-user-select: None;
   }
 
-  .stats{
+  .stats {
     width: 94%;
     margin-left: 3%;
     height: 90vw;
     justify-content: flex-start;
   }
 
-  .center{
+  .center {
     font-size: 8vw;
     margin-top: 2vw;
   }
 
-  .bottom{
+  .bottom {
     font-size: 4vw;
   }
 }
-
-

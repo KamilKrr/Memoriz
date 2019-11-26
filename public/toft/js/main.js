@@ -28,10 +28,6 @@ function init(){
         cardArray.push(new Card('card'+(i+1),false, getCard[i]));
     }
 
-    document.querySelector(".menu").addEventListener("click", function(){
-        document.querySelector("#maingame").classList.toggle("dark");
-    });
-
     document.querySelector(".field").addEventListener("click", function(){
         if(!gameStarted){
             start();
