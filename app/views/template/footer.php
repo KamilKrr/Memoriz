@@ -25,7 +25,7 @@
             <div class="column">
                 <p class="title is-4 is-spaced">Kontakt</p>
                 <hr>
-                <div class="columns">
+                <div class="columns is-mobile">
                     <div class="column is-narrow">
                         <a class="button is-medium" href="https://www.instagram.com/memoriz.it/" target="_blank">
                             <span class="icon">
@@ -57,7 +57,7 @@
                 </p>
             </div>
         </div>
-        <div class="content has-text-centered">
+        <div class="container has-text-centered">
             <p>
                 <a href="https://memoriz.it/"><strong>Memoriz</strong></a> - ein Projekt der <a href="https://www.htl.rennweg.at/" target="_blank">HTL Rennweg</a><br>© 2019 Alle Rechte vorbehalten
             </p>
