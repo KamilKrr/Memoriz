@@ -7,7 +7,7 @@ class Testpage extends Controller{
         $this->view('template/header');
 
         
-        //var_dump( $this->MemorySet->get8RandomFromMemorySet("1"));
+        print_r( $this->MemorySet->get8RandomFromMemorySet("1"));
         $memories = $this->MemorySet->getAllMemorySets();
 
         foreach($memories as $memory){

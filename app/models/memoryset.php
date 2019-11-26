@@ -6,16 +6,17 @@ class MemorySet extends Model{
 
         $memorySetFile = $this->getMemorySetFile($memorySetID);
 
-        $i = 0;
         foreach(preg_split("/((\r?\n)|(\r\n?))/", $memorySetFile) as $line){
-            if($i >= 8) break;
             $memoryCards = explode("|", $line);
 
             array_push($memorySet, $memoryCards);
-            $i++;
         }
 
-        return $memorySet;
+        shuffle($memorySet);
+
+        $memorySet8 = array_slice($memorySet, 0, 8);
+
+        return $memorySet8;
     }
 
     private function getMemorySetFile($memorySet){
@@ -50,6 +51,17 @@ class MemorySet extends Model{
         $memorySets = array();
 
         while($memorySetRow = $stmt->fetch()){
+            $tagStmt = $this->db->prepare("SELECT t.name FROM tag AS t INNER JOIN tag_memoryset AS tm ON t.pk_id = tm.fk_tag WHERE tm.fk_memoryset = :memorySetPk");
+            $tagStmt->execute(array(":memorySetPk" => $memorySetRow['pk_id']));
+
+            $tags = array();
+
+            while($tag = $tagStmt->fetch()){
+                array_push($tags, $tag['name']);
+            }
+
+            $memorySetRow['tags'] = $tags;
+            
             array_push($memorySets, $memorySetRow);
         }
 
