@@ -7,7 +7,7 @@
             <h2 class="subtitle">
                 Lerne jetzte für deine nächsten Tests mit <strong>Memoriz</strong>!
             </h2>
-            <a href="https://memoriz.it/toft"><button class="button is-medium is-primary is-inverted is-outlined">Loslegen</button></a>
+            <a href="https://memoriz.it/kategorie"><button class="button is-medium is-primary is-inverted is-outlined">Loslegen</button></a>
         </div>
     </div>
 </section>
@@ -22,7 +22,7 @@
             und bereite dich somit vor für deine nächste Schularbeit, Test oder Stundenwiederholung
         </p>
 
-        <a href="https://memoriz.it/toft"><button class="button is-primary is-outlined">Spielen</button></a>
+        <a href="https://memoriz.it/kategorie"><button class="button is-primary is-outlined">Spielen</button></a>
     </div>
 </section>
 <section class="section">

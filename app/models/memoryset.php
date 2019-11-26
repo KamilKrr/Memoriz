@@ -42,7 +42,7 @@ class MemorySet extends Model{
                                         k.beschreibung AS kategorie_beschreibung
                                     FROM
                                         memoryset AS m
-                                        INNER JOIN kategorie AS k ON m.pk_id = k.pk_id
+                                        INNER JOIN kategorie AS k ON m.fk_kategorie = k.pk_id
                                     WHERE
                                         m.is_listed = 1
                                     ");
