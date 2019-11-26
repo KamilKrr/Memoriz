@@ -9,7 +9,7 @@
         <div class="kategorie column is-one-fifth is-hidden-mobile"><?= $kategorie?></div>
         <div class="jahrgang column is-one-fifth is-hidden-mobile"><?= $jahrgang?>. Jahrgang</div>
         <div class="column is-one-fifth">
-            <a href="">
+            <a href="https://memoriz.it/play/memory/<?= $link ?>">
                 <button class="button is-primary is-small">
                     <span class="icon has-text-white">
                         <i class="fas fa-arrow-right"></i>

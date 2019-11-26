@@ -35,6 +35,7 @@ class MemorySet extends Model{
                                         m.autor,
                                         m.pk_id,
                                         m.name,
+                                        m.link,
                                         m.jahrgang,
                                         m.fk_kategorie,
                                         m.beschreibung,

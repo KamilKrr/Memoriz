@@ -22,6 +22,7 @@ class Kategorie extends Controller{
                 'beschreibung' => $memory['beschreibung'],
                 'autor' => $memory['autor'],
                 'tags' => $memory['tags'],
+                'link' => $memory['link'],
                 'getTags' => function() use ($memory){
                     foreach($memory['tags'] as $tag){
                         $tagText = array(
