@@ -20,26 +20,7 @@
             </div>
         </div>
         <div class="stats">
-<<<<<<< Updated upstream
         
-=======
-            <div class="navbarMem">
-                <div class="login">
-
-                </div>
-                <div class="logo">
-                    <img src="/public/images/memoriz_logo.png">
-                </div>
-                <div class="menu">
-                    <div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-            </div>
->>>>>>> Stashed changes
 
             <div class="center">
                 <span>Tag der offenen Tür</span>
