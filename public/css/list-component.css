@@ -24,3 +24,11 @@
     margin-bottom: 10px;
     cursor: text;
 }
+
+.name{
+    color: #330080;
+}
+
+.author{
+    margin-left: 15px;
+}

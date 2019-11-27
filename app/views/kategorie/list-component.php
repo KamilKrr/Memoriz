@@ -11,7 +11,7 @@
         <div class="column is-one-fifth">
             <a href="https://memoriz.it/play/memory/<?= $link ?>">
                 <button class="button is-primary is-small">
-                    <span class="icon has-text-white">
+                    <span class="icon arrow has-text-white">
                         <i class="fas fa-arrow-right"></i>
                     </span>
                 </button>
