@@ -8,16 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if ($listComponents.length > 0) {
   
       // Add a click event on each of them
-      $listComponents.forEach( el => {
-        el.addEventListener('click', () => {
+      $listComponents.forEach( component => {
+        const $closedcomponent = component.parentElement.querySelector(".dropdown");
+        var clickable = [component.querySelector(".chevron"), component.querySelector(".name"), component.querySelector(".kategorie"), component.querySelector(".jahrgang")];
+        var chevron = component.querySelector("i.fas");
+        clickable.forEach( clickable =>
+          clickable.addEventListener('click', () => {
   
-          // Get the target from the "data-target" attribute
-          const $target = el.parentElement.querySelector(".dropdown")
   
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $target.classList.toggle('is-hidden');
-  
-        });
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $closedcomponent.classList.toggle('is-hidden');
+            console.log(chevron);
+            chevron.style.transform = "rotate(180deg)";
+            
+    
+          })
+        );
+        
       });
     }
   

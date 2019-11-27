@@ -1,6 +1,6 @@
 <div class="container list-component">
     <div class="columns is-mobile is-marginless memory-set-header">
-        <div class="column is-one-fifth">
+        <div class="column is-1 chevron">
                 <span class="icon dropdown-arrow">
                     <i class="fas fa-chevron-down"></i>
                 </span>
