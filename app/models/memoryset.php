@@ -1,5 +1,20 @@
 <?php
 class MemorySet extends Model{
+
+    function getNameOfMemorySet($memorySetLink){
+        $stmt = $this->db->prepare("SELECT name FROM memoryset WHERE link = :link");
+        $stmt->execute(array(":link" => $memorySetLink));
+
+        if(!$stmt->rowCount()>0){
+            return "NOT FOUND";
+        }
+
+        $memorySetRow = $stmt->fetch();
+
+        $memoryName = $memorySetRow['name'];
+
+        return $memoryName;
+    }
     
     function get8RandomFromMemorySet($memorySetLink){
         $memorySetFile = $this->getMemorySetFile($memorySetLink);

@@ -10,7 +10,7 @@ class Lernen extends Controller{
         $this->view('template/footer');
     }
 
-    function memory($memorySet){
+    function memory($memorySet = ""){
         $this->model("MemorySet");
 
         if($memorySet == "toft"){
@@ -22,21 +22,28 @@ class Lernen extends Controller{
         );
         $this->view('template/header', $baseInfo);
 
-        $memoryInfo = array(
-            'name' => 'Tag der offenen Tür',
-            'getCards' => function() use ($memorySet){
-                $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
-                shuffle($cards);
-                foreach($cards as $card){
-                    $memoryKarteInfo = array(
-                        'content' => $card['content'],
-                        'id' => $card['id']
-                    );
-                    $this->view('lernen/memory-karte', $memoryKarteInfo);
+        $name = $this->MemorySet->getNameOfMemorySet($memorySet);
+
+        if($name != "NOT FOUND"){
+            $memoryInfo = array(
+                'name' => $name,
+                'getCards' => function() use ($memorySet){
+                    $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
+                    shuffle($cards);
+                    foreach($cards as $card){
+                        $memoryKarteInfo = array(
+                            'content' => $card['content'],
+                            'id' => $card['id']
+                        );
+                        $this->view('lernen/memory-karte', $memoryKarteInfo);
+                    }
                 }
-            }
-        );
-        $this->view('lernen/index', $memoryInfo);
+            );
+            $this->view('lernen/index', $memoryInfo);
+        }else{
+            $this->view('lernen/memory-not-found');
+        }
+
         $this->view('template/footer');
     }
 
