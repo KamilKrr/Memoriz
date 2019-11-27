@@ -3,7 +3,7 @@
 class Lernen extends Controller{
     function Index(){
         $baseInfo = array(
-            'page' => 'spielen'
+            'page' => 'lernen'
         );
         $this->view('template/header', $baseInfo);
         echo "Bitte eine Memoryset auswählen!";
@@ -47,16 +47,8 @@ class Lernen extends Controller{
         $this->view('template/footer');
     }
 
-    private function array_2d_to_1d ($input_array) {
-        $output_array = array();
-    
-        for ($i = 0; $i < count($input_array); $i++) {
-          for ($j = 0; $j < count($input_array[$i]); $j++) {
-            $output_array[] = $input_array[$i][$j];
-          }
-        }
-    
-        return $output_array;
+    function ressourcen($memorySet = ""){
+        echo "ressourcen";
     }
 }
 

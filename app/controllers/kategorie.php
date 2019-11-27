@@ -5,7 +5,7 @@ class Kategorie extends Controller{
         $this->model("MemorySet");
 
         $baseInfo = array(
-            'page' => 'spielen'
+            'page' => 'lernen'
         );
         $this->view('template/header', $baseInfo);
         $this->view('kategorie/kategorie-header');
