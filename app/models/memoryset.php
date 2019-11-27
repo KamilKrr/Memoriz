@@ -1,27 +1,47 @@
 <?php
 class MemorySet extends Model{
     
-    function get8RandomFromMemorySet($memorySetID){
-        $memorySet = array();
-
-        $memorySetFile = $this->getMemorySetFile($memorySetID);
+    function get8RandomFromMemorySet($memorySetLink){
+        $memorySetFile = $this->getMemorySetFile($memorySetLink);
+        $allPairs = array();
 
         foreach(preg_split("/((\r?\n)|(\r\n?))/", $memorySetFile) as $line){
-            $memoryCards = explode("|", $line);
+            if(empty($line)){
+                break;
+            }
+            $memoryPair = explode("|", $line);
 
-            array_push($memorySet, $memoryCards);
+            array_push($allPairs, $memoryPair);
         }
 
-        shuffle($memorySet);
+        shuffle($allPairs);
 
-        $memorySet8 = array_slice($memorySet, 0, 8);
+        $memorySet = array_slice($allPairs, 0, 8);
 
-        return $memorySet8;
+        $all16Cards = array();
+
+        $i = 0;
+        foreach ($memorySet as $memoryPair) {
+            if($i >= 16){
+                break;
+            }
+
+            foreach ($memoryPair as $memoryCard) {
+                $card = array(
+                    'content' => $memoryCard,
+                    'id' => $i+1
+                );
+                $i++;
+                array_push($all16Cards, $card);
+            }
+            
+        }
+        return $all16Cards;
     }
 
-    private function getMemorySetFile($memorySet){
-        $stmt = $this->db->prepare("SELECT * FROM memoryset WHERE pk_id = :pk_id");
-        $stmt->execute(array(":pk_id" => $memorySet));
+    private function getMemorySetFile($memorySetLink){
+        $stmt = $this->db->prepare("SELECT * FROM memoryset WHERE link = :link");
+        $stmt->execute(array(":link" => $memorySetLink));
 
         $memorySetRow = $stmt->fetch();
 

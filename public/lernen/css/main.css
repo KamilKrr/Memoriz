@@ -1,0 +1,311 @@
+html,
+body {
+  background-color: #e7e7e7;
+
+}
+
+body.dark {
+  background-color: #220027;
+}
+
+.contentMem {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.field {
+  position: relative;
+  width: 60vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+
+
+}
+
+.field-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 46.8vw;
+}
+
+.stats {
+  position: relative;
+  background-color: #ffffff;
+  width: 40vw;
+  height: calc(100vh - 3vw);
+  margin: 1.5vw;
+  border-radius: 1vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardHolder {
+  height: 10.5vw;
+  width: 10.5vw;
+  padding: .6vw;
+  z-index: 2;
+}
+
+
+.card {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 7%;
+  background-image: url("/public/toft/resources/card_blue.png");
+  background-size: cover;
+  background-color: white;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all .3s;
+}
+
+.card>p {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 7%;
+  text-align: center;
+  visibility: hidden;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.card>p>img {
+  padding: 5%;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.card:hover {
+
+  padding: .3vw;
+  left: -.3vw;
+  top: -.3vw;
+  box-shadow: 0px 0px 5px 5px rgb(85, 228, 157);
+  transition: 0.3s;
+}
+
+.flip {
+  transform: rotateY(180deg);
+  background-size: 0 0;
+}
+
+.correctCard {
+  transition-delay: 1s;
+  transition: .3s;
+  opacity: 0.5;
+}
+
+
+.center {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+.clock {
+  font-family: 'Cutive Mono', monospace;
+  margin-top: 2vh;
+  font-weight: normal;
+  font-size: 3em;
+  color: #14E4D6;
+}
+
+.bottom {
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  font-size: 1.5em;
+}
+
+.bottom>div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom>div>span:nth-child(1) {
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.bottom>div>span:nth-child(2) {
+  color: #330080;
+}
+
+.cardVisible>p {
+  visibility: visible;
+  transition-delay: .1s;
+  transform: rotateY(180deg);
+}
+
+.wiggle {
+  animation: wiggle 1s;
+}
+
+
+@keyframes wiggle {
+
+  10%,
+  90% {
+    transform: translate(-1px, 0) rotateY(180deg);
+  }
+
+  20%,
+  80% {
+    transform: translate(2px, 0) rotateY(180deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate(-4px, 0) rotateY(180deg);
+  }
+
+  40%,
+  60% {
+    transform: translate(4px, 0) rotateY(180deg);
+  }
+}
+
+#gamecomplete {
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#gamecomplete>div {
+  width: 60vw;
+  height: 80vh;
+  margin: 10vh 20vw 10vh 20vw;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 1vw;
+  text-align: center;
+  z-index: 10;
+}
+
+#gamecomplete>div>h2 {
+  padding-top: 5vh;
+  font-size: 3em;
+  color: #330080;
+}
+
+#gamecomplete>div>p {
+  padding: 2vh;
+  font-size: 1.5em;
+  margin: 0 2vw 0 2vw;
+}
+
+#gamecomplete>div>button {
+  width: 12vw;
+  height: 4vw;
+  margin-top: 6vw;
+  border-radius: 2vw;
+  font-size: 1.2em;
+  border: 2px solid #330080;
+  color: #330080;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+#gamecomplete>div>button:hover {
+  background-color: #330080;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/** confetti canvas */
+#particle-canvas {
+  display: block;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  .contentMem {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 0;
+    padding-top: 4vw;
+  }
+
+  .content {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .field {
+    width: 100%;
+    height: 80%;
+  }
+
+  .field-center {
+    max-width: 96vw;
+  }
+
+  .cardHolder {
+    width: 24vw;
+    height: 24vw;
+    padding: 1vw;
+    font-size: 3vw;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+  }
+
+  .stats {
+    width: 94%;
+    margin-left: 3%;
+    height: 90vw;
+    justify-content: flex-start;
+  }
+
+  .center {
+    font-size: 8vw;
+    margin-top: 2vw;
+  }
+
+  .bottom {
+    font-size: 4vw;
+  }
+}

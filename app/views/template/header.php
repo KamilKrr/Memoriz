@@ -49,8 +49,8 @@
                     Startseite
                 </a>
 
-                <a href="https://memoriz.it/kategorie" class="navbar-item <?php echo($page == 'spielen' ? 'is-active' : '')?>">
-                    Spielen
+                <a href="https://memoriz.it/kategorie" class="navbar-item <?php echo($page == 'lernen' ? 'is-active' : '')?>">
+                    Lernen
                 </a>
 
                 <a class="navbar-item <?php echo($page == 'erstellen' ? 'is-active' : '')?>">
