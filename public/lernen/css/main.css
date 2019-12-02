@@ -1,6 +1,7 @@
 html,
 body {
   background-color: #e7e7e7;
+  font-size: .8em;
 
 }
 
@@ -17,7 +18,7 @@ body.dark {
 .field {
   position: relative;
   width: 60vw;
-  height: 100vh;
+  height: 92vh;
 
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@ body.dark {
   position: relative;
   background-color: #ffffff;
   width: 40vw;
-  height: calc(100vh - 3vw);
+  height: calc(92vh - 3vw);
   margin: 1.5vw;
   border-radius: 1vw;
 
@@ -287,7 +288,7 @@ body.dark {
     width: 24vw;
     height: 24vw;
     padding: 1vw;
-    font-size: 3vw;
+    font-size: 2vw;
     -ms-user-select: None;
     -moz-user-select: None;
     -webkit-user-select: None;

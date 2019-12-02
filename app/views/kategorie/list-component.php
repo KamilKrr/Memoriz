@@ -23,11 +23,19 @@
             <h4 class="row"><strong>Info</strong></h4>
             <p class="row"><?= $beschreibung?></p>
         </div>
-        <div class="author column is-one-fifth-desktop is-half-mobile">
+        <div class="author column is-one-fifth-desktop is-one-fifth-tablet is-half-mobile">
             <h4 class="row"><strong>Autor</strong></h4>
             <p class="row"><?= $autor?></p>
         </div>
-        <div class="tags column is-one-fifth-desktop is-half-mobile">
+        <div class="author column is-hidden-desktop is-hidden-tablet is-half-mobile">
+            <h4 class="row"><strong>Jahrgang</strong></h4>
+            <p class="row"><?= $jahrgang?>. Jahrgang</p>
+        </div>
+        <div class="author column is-hidden-desktop is-hidden-tablet is-half-mobile">
+            <h4 class="row"><strong>Kategorie</strong></h4>
+            <p class="row"><?= $kategorie?></p>
+        </div>
+        <div class="tags column is-one-fifth-desktop is-one-fifth-tablet is-half-mobile">
             <h4 class="row"><strong>Tags</strong></h4>
             <div class="row">
                 <?= $getTags()?>
