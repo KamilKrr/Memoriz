@@ -1,0 +1,45 @@
+.memory-card{
+    width: 12vw;
+    height: 12vw;
+    background: #ffffff;
+    position: relative;
+    border-radius: .8vw;
+    margin: 2vw;
+    display: inline-block;
+    border: 3px solid #330080;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.top-card{
+    margin-left: -5vw;
+    transform: translate(0, 2vw);
+    box-shadow: -29px 0px 76px -15px rgba(0,0,0,0.31);
+}
+
+.info-text{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5em;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+    .memory-card{
+        width: 40vw;
+        height: 40vw;
+        border-radius: 2vw;
+        margin: 2vw;
+        border: 3px solid #330080;
+    }
+    .top-card{
+        margin-left: -9vw;
+        transform: translate(0, 6vw);
+    }
+}
