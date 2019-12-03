@@ -102,7 +102,7 @@ function turn(id) {
         cardArray[id - 1].isOpen = true;
 
         game.addTurn();
-        document.getElementById("turns").querySelectorAll("span")[0].innerHTML = game.getTurns();
+        document.getElementById("turns").querySelectorAll("span")[0].innerHTML = Math.floor(game.getTurns()/2);
 
         turnedCards.push(id);
         

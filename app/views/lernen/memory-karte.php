@@ -1,5 +1,5 @@
 <div class="cardHolder" id="cardHolder<?= $id?>">
     <div class="card" id="card<?= $id?>">
-        <p><?= $content?></p>
+        <?= $content?>
     </div>
 </div>
