@@ -6,7 +6,7 @@
         <div class="columns">
             <div class="field has-addons column is-5">
                 <div class="control is-expanded">
-                    <input class="input" type="text" placeholder="Finde ein Memory">
+                    <input class="input memorySetSuche" type="text" placeholder="Finde ein Memory">
                 </div>
                 <div class="control">
                     <a class="button is-primary">
@@ -18,8 +18,9 @@
             <div class="column">
                 <div class="control has-icons-left">
                     <div class="select">
-                        <select>
-                            <option>Kategorie</option>
+                        <select class="kategorieFilter">
+                            <option selected value="leer">Kategorie - leer</option>
+                            <?= $getKategorien()?>
                         </select>
                     </div>
                     <span class="icon is-left is-normal">
@@ -30,8 +31,9 @@
             <div class="column">
                 <div class="control has-icons-left">
                     <div class="select">
-                        <select>
-                            <option>Jahrgang</option>
+                        <select class="jahrgangFilter">
+                            <option selected value="leer">Jahrgang - leer</option>
+                            <?= $getJahrgaenge()?>
                         </select>
                     </div>
                     <span class="icon is-left is-normal">

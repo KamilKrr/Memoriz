@@ -101,6 +101,8 @@ class MemorySet extends Model{
                                         INNER JOIN kategorie AS k ON m.fk_kategorie = k.pk_id
                                     WHERE
                                         m.is_listed = 1
+                                    ORDER BY
+                                        m.name
                                     ");
         $stmt->execute();
 
