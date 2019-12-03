@@ -15,7 +15,7 @@
                 </p>
                 <hr>
                 <ul>
-                    <li><a href="/">Impressum</a></li>
+                    <li><a href="https://memoriz.it/impressum">Impressum</a></li>
                     <li><a href="/">Kontakt</a></li>
                     <li><a href="https://memoriz.it/team">Team</a></li>
                     <li><a href="/">Schule</a></li>

@@ -21,7 +21,6 @@
     <script src="/public/js/app.js"></script>
 
     <!--Bulma-->
-    
     <link rel="stylesheet" href="/public/css/mystyles.css">
 
     <!--Font Awesome-->
