@@ -43,36 +43,35 @@ class MemorySet extends Model{
                 break;
             }
 
-            $content = $memoryPair[0];
-            if(preg_match("\((.*)\)\[(.*)\]", $content, $data)){
-                $content = "";
-            }
+            $content = $this->getMemoryMarkup($memoryPair[0]);
             $card = array(
                 'content' => $content,
                 'id' => $i+1
             );
             array_push($all16Cards, $card);
 
+            $content = $this->getMemoryMarkup($memoryPair[1]);
             $card = array(
-                'content' => $memoryPair[1],
+                'content' => $content,
                 'id' => $i+2
             );
             array_push($all16Cards, $card);
 
             $i+=2;
-
-
-            foreach ($memoryPair as $memoryCard) {
-                $card = array(
-                    'content' => $memoryCard,
-                    'id' => $i+1
-                );
-                $i++;
-                array_push($all16Cards, $card);
-            }
-            
         }
         return $all16Cards;
+    }
+
+    private function getMemoryMarkup($content){
+        $data = "";
+        if(preg_match("/\((.*)\)\[(.*)\]/", $content, $data)){
+            $result = "<p><img src='$data[2]' alt='$data[1]'></p>";
+        }else if(preg_match("/<#(.*)>/", $content, $data)){
+            $result = "<span class='colorMemory' style='display: block; width: 100%; height: 100%; background: #" . $data[1] . ";'></span>";
+        }else{
+            $result = "<p>" . $content . "</p>";
+        }
+        return $result;
     }
 
     private function getMemorySetFile($memorySetLink){
