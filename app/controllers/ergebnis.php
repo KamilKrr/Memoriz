@@ -7,12 +7,12 @@ class Ergebnis extends Controller{
         );
         $this->view('template/header', $baseInfo);
 
-        $activeMemorySet = $_SESSION['memorySet_active'];
+        //$activeMemorySet = $_SESSION['memorySet_active'];
 
         
 
 
-        $this->view('ergebniss/index');
+        $this->view('ergebnis/index');
         $this->view('template/footer');
     }
 }
