@@ -33,6 +33,8 @@ class MemorySet extends Model{
 
         $memorySet = array_slice($allPairs, 0, 8);
 
+        $_SESSION['memorySet_active'] = $memorySet;
+
         $all16Cards = array();
 
         $i = 0;
@@ -40,6 +42,25 @@ class MemorySet extends Model{
             if($i >= 16){
                 break;
             }
+
+            $content = $memoryPair[0];
+            if(preg_match("\((.*)\)\[(.*)\]", $content, $data)){
+                $content = "";
+            }
+            $card = array(
+                'content' => $content,
+                'id' => $i+1
+            );
+            array_push($all16Cards, $card);
+
+            $card = array(
+                'content' => $memoryPair[1],
+                'id' => $i+2
+            );
+            array_push($all16Cards, $card);
+
+            $i+=2;
+
 
             foreach ($memoryPair as $memoryCard) {
                 $card = array(
