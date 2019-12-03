@@ -1,11 +1,10 @@
-html,
-body {
+#maingame{
   background-color: #e7e7e7;
   font-size: .8em;
 
 }
 
-body.dark {
+#maingame.dark {
   background-color: #220027;
 }
 
