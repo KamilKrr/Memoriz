@@ -33,7 +33,17 @@ class MemorySet extends Model{
 
         $memorySet = array_slice($allPairs, 0, 8);
 
-        $_SESSION['memorySet_active'] = $memorySet;
+        $memorySetActiveMarkup = array();
+
+        foreach($memorySet as $memoryPair){
+            $memoryPairMarkup = array();
+            foreach($memoryPair as $memoryCard){
+                array_push($memoryPairMarkup, $this->getMemoryMarkup($memoryCard));
+            }
+            array_push($memorySetActiveMarkup, $memoryPairMarkup);
+        }
+
+        $_SESSION['memorySetActiveMarkup'] = $memorySetActiveMarkup;
 
         $all16Cards = array();
 

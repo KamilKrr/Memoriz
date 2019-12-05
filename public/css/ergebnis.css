@@ -7,6 +7,10 @@
     margin: 2vw;
     display: inline-block;
     border: 3px solid #330080;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container{

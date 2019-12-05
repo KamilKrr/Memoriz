@@ -7,12 +7,20 @@ class Ergebnis extends Controller{
         );
         $this->view('template/header', $baseInfo);
 
-        //$activeMemorySet = $_SESSION['memorySet_active'];
+        $memorySetActiveMarkup = $_SESSION['memorySetActiveMarkup'];
+
+        foreach($memorySetActiveMarkup as $memoryPairActiveMarkup){
+            $memoryPairResult = array(
+                'card1' => $memoryPairActiveMarkup[0],
+                'card2' => $memoryPairActiveMarkup[1],
+                'description' => $memoryPairActiveMarkup[2] ?? "Keine Beschreibung vorhanden"
+            );
+    
+    
+            $this->view('ergebnis/memory-result-component', $memoryPairResult);
+        }
 
         
-
-
-        $this->view('ergebnis/index');
         $this->view('template/footer');
     }
 }
