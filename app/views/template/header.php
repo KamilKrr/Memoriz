@@ -32,6 +32,9 @@ Lerne jetzte für deine nächsten Tests mit Memoriz!">
     <!--Font Awesome-->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+    <!--SEO index & follow-->
+    <meta name="robots" content="index, follow">
+
     <!--icons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/public/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/public/icons/apple-icon-60x60.png">
