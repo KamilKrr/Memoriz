@@ -18,7 +18,8 @@
             </a>
         </div>   
     </div>
-    <div class="columns is-multiline is-mobile is-hidden dropdown">
+    <div class="columns is-marginless is-multiline is-mobile is-hidden dropdown">
+        <div class="column is-hidden-mobile is-1"></div>
         <div class="info column is-full-mobile rows">
             <h4 class="row"><strong>Info</strong></h4>
             <p class="row memory-set-beschreibung"><?= $beschreibung?></p>
@@ -29,7 +30,7 @@
         </div>
         <div class="author column is-hidden-desktop is-hidden-tablet is-half-mobile">
             <h4 class="row"><strong>Jahrgang</strong></h4>
-            <p class="row"><span class="memory-set-jahrgang"><?= $jahrgang?></span. Jahrgang</p>
+            <p class="row"><span class="memory-set-jahrgang"><?= $jahrgang?></span>. Jahrgang</p>
         </div>
         <div class="author column is-hidden-desktop is-hidden-tablet is-half-mobile">
             <h4 class="row"><strong>Kategorie</strong></h4>
@@ -41,6 +42,8 @@
                 <?= $getTags()?>
             </div>
         </div>
+        
         <div  class="column is-one-fifth"></div>
+        <div class="column is-full is-hidden-mobile" id="margin-bottom"></div>
     </div>
 </div>

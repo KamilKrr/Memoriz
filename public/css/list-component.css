@@ -13,9 +13,6 @@
     color: black;
 }
 
-.info{
-    margin-bottom: 1em;
-}
 
 .dropdown{
     margin-bottom: 10px;
@@ -28,5 +25,9 @@
 
 .author{
     margin: 0;
+}
+
+#margin-bottom{
+    padding: 0;
 }
 
