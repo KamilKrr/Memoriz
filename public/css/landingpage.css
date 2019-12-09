@@ -1,0 +1,96 @@
+
+
+
+.parallax {
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  background: rgb(250, 250, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(250, 250, 250, 1) 37%,
+    rgba(230, 230, 230, 1) 62%,
+    rgba(230, 230, 230, 1) 100%
+  );
+}
+
+.parallax > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parallax-icon {
+  width: 250px;
+  position: absolute;
+}
+
+.parallax-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#startbutton:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0, 255, 204, 1);
+}
+
+#book {
+  left: 20vw;
+  top: calc(52px + 5vh);
+}
+
+#gears {
+  left: 0vw;
+  top: calc(52px + 30vh);
+}
+
+#computer {
+  left: 10vw;
+  top: calc(52px + 70vh);
+}
+
+#lightbulb {
+  right: 12vw;
+  top: calc(52px + 2vh);
+}
+
+#pencil {
+  right: 2vw;
+  top: calc(52px + 40vh);
+}
+
+#brain {
+  right: 15vw;
+  top: calc(52px + 68vh);
+}
+
+.learning {
+  height: calc(100vh - 52px);
+}
+
+.learning > div > img {
+  width: 100px;
+  height: auto;
+}
+
+.learning button {
+  margin-top: 1em;
+}
+
+.creating {
+  height: calc(100vh - 52px);
+}
+
+.creating button {
+  margin-top: 1em;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  
+}

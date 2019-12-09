@@ -4,10 +4,15 @@
     <div class="column is-5 columns card-container">
         <div>
             <div class="memory-card">
-                <?= $card1?>
+                <div>
+                    <?= $card1?>
+                </div>
             </div>
             <div class="memory-card top-card">
-                <?= $card2?>
+                <div>
+                  <?= $card2?>  
+                </div>
+            
             </div>
         </div>
     </div>

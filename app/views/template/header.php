@@ -12,6 +12,14 @@
     <meta name="author" content="Memoriz">
     <meta name="robots" content="index, follow">
 
+    <!--twitter card-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@memoriz_it">
+    <meta name="twitter:title" content="Memoriz">
+    <meta name="twitter:description" content="Memoriz: eine Memory-basierte Lernplattform
+Lerne jetzte für deine nächsten Tests mit Memoriz!">
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/1189196717964582912/1573287255/1500x500">
+
     <!--custom css-->
     <link href="/public/css/app.css" rel="stylesheet">
 
