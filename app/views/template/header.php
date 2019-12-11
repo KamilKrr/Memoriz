@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Memoriz: Eine Memory-basierte Lernplattform</title>
 
-    <meta name="description" content="Memoriz.it ist eine Memory-basierte Lernplattform die dabei hilft Daten in Paarenform so vorzubereiten, dass man sich diese einfacher merken kann. Memoriz.it ist perfekt für das Lernen und üben von Schulstoff.">
+    <meta name="description" content="Memoriz.it ist eine Memory-basierte Lernplattform die dabei hilft Daten in Paarenform so vorzubereiten, dass man sich diese einfacher merken kann.">
     <meta name="keywords" content="Memory, lernen, Vokabeln, Schule, Schulstoff, Spaß, Schüler, HTL Rennweg, auswendig lernen, üben, vorbereiten, Tests, Schularbeiten">
     <meta name="author" content="Memoriz">
     <meta name="robots" content="index, follow">
@@ -55,7 +55,7 @@ Lerne jetzte für deine nächsten Tests mit Memoriz!">
 </head>
 
 <body>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://memoriz.it">
                 <img src="/public/images/memoriz_logo.png" width="112" height="28" alt="Official Memoriz Text Logo">
@@ -78,7 +78,7 @@ Lerne jetzte für deine nächsten Tests mit Memoriz!">
                     Lernen
                 </a>
 
-                <a class="navbar-item <?php echo ($page == 'erstellen' ? 'is-active' : '') ?>">
+                <a href="https://memoriz.it/erstellen" class="navbar-item <?php echo ($page == 'erstellen' ? 'is-active' : '') ?>">
                     Erstellen
                 </a>
             </div>

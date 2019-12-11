@@ -18,13 +18,24 @@ class MemorySet extends Model{
     
     function get8RandomFromMemorySet($memorySetLink){
         $memorySetFile = $this->getMemorySetFile($memorySetLink);
+
+        $explodeToken = "|";
+
+        $count1 = substr_count($memorySetFile, "|");
+        $count2 = substr_count($memorySetFile, ";");
+
+        if($count2 > $count1){
+            $explodeToken = ";";
+        }
+        
+
         $allPairs = array();
 
         foreach(preg_split("/((\r?\n)|(\r\n?))/", $memorySetFile) as $line){
             if(empty($line)){
                 break;
             }
-            $memoryPair = explode("|", $line);
+            $memoryPair = explode($explodeToken, $line);
 
             array_push($allPairs, $memoryPair);
         }
@@ -136,6 +147,26 @@ class MemorySet extends Model{
         return $memorySets;
     }
     
+    function uploadMemoryFile($memoryFile, $name = "no_name_error", $autor = "unknown", $description = ""){
+        $randomLink = md5(uniqid('memory_', true));
+        
+        try{
+            $stmt = $this->db->prepare("INSERT INTO memoryset VALUES (:name, :autor, NULL, 0, 0, 0, :link, :memoryDatei, :beschreibung)");
+            $stmt->execute(
+                array(
+                    ":name" => $name,
+                    ":autor" => $autor,
+                    ":link" => $randomLink,
+                    ":memoryDatei" => $memoryFile,
+                    ":beschreibung" => $description
+                )
+            );
+        }catch(PDOException $e){
+            echo $e;
+        }
+
+        return $randomLink;
+    }
 }
 
 

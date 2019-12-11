@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector(".kategorieFilter").addEventListener("change", filterMemorySets);
   document.querySelector(".jahrgangFilter").addEventListener("change", filterMemorySets);
 
+  filterMemorySets();
 });
 
 function filterMemorySets(){
