@@ -13,7 +13,8 @@ class Erstellen extends Controller{
 
             $_SESSION['custom_link'] = $link;
 
-            header('Location: http://test.local/erstellen/link');
+
+            header('Location: https://memoriz.it/erstellen/link');
 
             exit;
         }
@@ -47,6 +48,11 @@ class Erstellen extends Controller{
     }
 
     function link(){
+
+        if(!isset($_SESSION['custom_link'])){
+            $this->web_interface();
+        }
+
         $baseInfo = array(
             'page' => 'erstellen'
         );
