@@ -1,34 +1,21 @@
 <?php
 class MemorySet extends Model{
 
-    function getNameOfMemorySet($memorySetLink){
-        $stmt = $this->db->prepare("SELECT name FROM memoryset WHERE link = :link");
-        $stmt->execute(array(":link" => $memorySetLink));
-
-        if(!$stmt->rowCount()>0){
-            return "NOT FOUND";
-        }
-
-        $memorySetRow = $stmt->fetch();
-
-        $memoryName = $memorySetRow['name'];
-
-        return $memoryName;
-    }
 
     function getInfoOfMemorySet($memorySetLink){
-        $stmt = $this->db->prepare("SELECT beschreibung FROM memoryset WHERE link = :link");
+        $stmt = $this->db->prepare("SELECT name, beschreibung FROM memoryset WHERE link = :link");
         $stmt->execute(array(":link" => $memorySetLink));
 
         if(!$stmt->rowCount()>0){
             return "NOT FOUND";
         }
 
+
         $memorySetRow = $stmt->fetch();
 
-        $memoryName = $memorySetRow['beschreibung'];
+        $info = array($memorySetRow['name'], $memorySetRow['beschreibung']);
 
-        return $memoryName;
+        return $info;
     }
     
     function get8RandomFromMemorySet($memorySetLink){
@@ -168,6 +155,7 @@ class MemorySet extends Model{
     
     function uploadMemoryFile($memoryFile, $name = "no_name_error", $autor = "unknown", $description = ""){
         $randomLink = md5(uniqid('memory_', true));
+
         
         try{
             $stmt = $this->db->prepare("INSERT INTO memoryset VALUES (:name, :autor, NULL, 0, 0, 0, :link, :memoryDatei, :beschreibung)");

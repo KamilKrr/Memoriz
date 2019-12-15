@@ -5,7 +5,7 @@ class Erstellen extends Controller{
 
 
         if(isset($_POST['submitFile']) && isset($_FILES['memoryFile']) && isset($_POST['memoryName'])){
-            $uploadFile = file_get_contents($_FILES['memoryFile']['tmp_name']);
+            $uploadFile = $this->file_get_contents_utf8($_FILES['memoryFile']['tmp_name']);
 
             $this->model("MemorySet");
 
@@ -22,6 +22,12 @@ class Erstellen extends Controller{
         
         $this->web_interface();
     }
+
+    private function file_get_contents_utf8($fn) {
+        $content = file_get_contents($fn);
+         return mb_convert_encoding($content, 'UTF-8',
+             mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true));
+   }
 
     function datei_upload($subsite = ""){
         $baseInfo = array(
