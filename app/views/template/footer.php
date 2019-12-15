@@ -16,10 +16,10 @@
                 <hr>
                 <ul>
                     <li><a href="https://memoriz.it/impressum">Impressum</a></li>
-                    <li><a href="/">Kontakt</a></li>
+                    <li><a href="mailto:info@memoriz.it">Kontakt</a></li>
                     <li><a href="https://memoriz.it/team">Team</a></li>
-                    <li><a href="/">Schule</a></li>
-                    <li><a href="/">Projekt</a></li>
+                    <li><a href="https://www.htl.rennweg.at/">Schule</a></li>
+                    <li><a href="https://memoriz.it/projekt">Projekt</a></li>
                 </ul>
             </div>
             <div class="column is-one-quarter">

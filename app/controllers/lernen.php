@@ -11,24 +11,30 @@ class Lernen extends Controller{
     }
 
     function memory($memorySet = ""){
+
+
         $this->model("MemorySet");
 
         if($memorySet == "toft"){
             header("Location: https://memoriz.it/toft");
         }
 
-        $baseInfo = array(
-            'page' => 'lernen'
-        );
-        $this->view('template/header', $baseInfo);
+        
 
         $name = $this->MemorySet->getNameOfMemorySet($memorySet);
 
         if($name != "NOT FOUND"){
+
+            $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
+
+            if(!$cards){
+                header("Location: https://memoriz.it/Error999");
+            }
+
             $memoryInfo = array(
                 'name' => $name,
-                'getCards' => function() use ($memorySet){
-                    $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
+                'getCards' => function() use ($cards){
+
                     shuffle($cards);
                     foreach($cards as $card){
                         $memoryKarteInfo = array(
@@ -39,6 +45,12 @@ class Lernen extends Controller{
                     }
                 }
             );
+
+            $baseInfo = array(
+                'page' => 'lernen'
+            );
+            $this->view('template/header', $baseInfo);
+
             $this->view('lernen/index', $memoryInfo);
         }else{
             $this->view('lernen/memory-not-found');

@@ -4,12 +4,12 @@ class Erstellen extends Controller{
     function Index(){
 
 
-        if(isset($_POST['submitFile']) && isset($_FILES['memoryFile'])){
+        if(isset($_POST['submitFile']) && isset($_FILES['memoryFile']) && isset($_POST['memoryName'])){
             $uploadFile = file_get_contents($_FILES['memoryFile']['tmp_name']);
 
             $this->model("MemorySet");
 
-            $link = $this->MemorySet->uploadMemoryFile($uploadFile);
+            $link = $this->MemorySet->uploadMemoryFile($uploadFile, $_POST['memoryName']);
 
             $_SESSION['custom_link'] = $link;
 
@@ -23,16 +23,28 @@ class Erstellen extends Controller{
         $this->web_interface();
     }
 
-    function datei_upload(){
+    function datei_upload($subsite = ""){
         $baseInfo = array(
             'page' => 'erstellen'
         );
 
-        $this->view('template/header', $baseInfo);
+        if($subsite == "anleitung"){
+            $this->view('template/header', $baseInfo);
 
-        $this->view('erstellen/datei-upload');
+            $this->view('erstellen/anleitung');
+    
+            $this->view('template/footer');
 
-        $this->view('template/footer');
+        }else{
+            $this->view('template/header', $baseInfo);
+
+            $this->view('erstellen/datei-upload');
+    
+            $this->view('template/footer');
+        }
+        
+
+        
     }
 
     function web_interface(){

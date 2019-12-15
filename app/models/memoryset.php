@@ -40,6 +40,10 @@ class MemorySet extends Model{
             array_push($allPairs, $memoryPair);
         }
 
+        if(count($allPairs) < 8){
+            return false;
+        }
+
         shuffle($allPairs);
 
         $memorySet = array_slice($allPairs, 0, 8);

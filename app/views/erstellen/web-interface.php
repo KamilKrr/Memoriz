@@ -21,6 +21,98 @@
     </div>
 
     <section class="section content">
-        
+        <form>
+            <div class="field columns is-hidden-mobile">
+                <div class="column is-1">
+                    <div class="content subtitle">
+                        Nr.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content subtitle">
+                        Karte 1
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content subtitle">
+                        Karte 2
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content subtitle">
+                        Beschreibung (Optional)
+                    </div>
+                </div>
+            </div>
+            <div class="field columns memory-paar-erstellen">
+                <div class="column is-1">
+                    <div class="content">
+                        1
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 1">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 2">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field columns memory-paar-erstellen">
+                <div class="column is-1">
+                    <div class="content">
+                        2
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 1">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 2">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field columns memory-paar-erstellen">
+                <div class="column is-1">
+                    <div class="content">
+                        3
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 1">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Karte 2">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </form>
     </section>
 </section>

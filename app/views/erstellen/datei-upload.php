@@ -19,11 +19,10 @@
             </li>
         </ul>
     </div>
-    <section class="section content">
+    <section class="section">
+        <div class="columns">
 
-        <div class="columns is-centered">
-
-            <div class="column is-centered has-text-centered">
+            <div class="column column is-half is-offset-one-quarter">
 
                 <form method="post" action="http://memoriz.it/erstellen" enctype="multipart/form-data">
                     <div class="field">
@@ -45,11 +44,21 @@
                         </div>
                     </div>
 
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" name="memoryName" type="text" placeholder="z.b. Straßenschilder">
+                        </div>
+                    </div>
+
                     <div class="buttons is-centered">
                         <button type="submit" name="submitFile" class="button is-primary">Erstellen</button>
                     </div>
                 </form>
-
+                <div class="is-link has-text-centered">
+                    <a href="https://memoriz.it/erstellen/datei_upload/anleitung">Wie erstellt man eine Memoryset
+                        Datei?</a>
+                </div>
             </div>
         </div>
 
