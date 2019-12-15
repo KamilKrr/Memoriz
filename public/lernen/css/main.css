@@ -25,6 +25,7 @@
   justify-content: center;
 
   align-items: center;
+  margin-bottom: 1vw;
 
 
 
@@ -47,7 +48,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .cardHolder {
@@ -129,17 +130,26 @@
 .center {
   width: 100%;
   text-align: center;
-  font-size: 2.5vw;
+}
+
+.center > h1{
+  font-size: 3em;
   font-weight: bold;
 }
 
-.clock {
-  font-family: 'Cutive Mono', monospace;
-  margin-top: 2vh;
-  font-weight: normal;
-  font-size: 3em;
-  color: #14E4D6;
+.info{
+ text-align: left;
+ margin: 4vw;
+ font-size: 1.5em;
 }
+
+.info > h2{
+  color: #330080;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+
 
 .bottom {
   width: 100%;
@@ -148,7 +158,7 @@
   bottom: 0;
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .bottom>div {
@@ -158,6 +168,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .bottom>div>span:nth-child(1) {
@@ -277,10 +288,19 @@
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+
+  #maingame{
+    min-height: calc(100vh - 52px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   .contentMem {
     flex-direction: column;
+    justify-content: center;
+    height: auto;
   }
 
   .section {
@@ -317,8 +337,10 @@
   .stats {
     width: 94%;
     margin-left: 3%;
-    height: 90vw;
-    justify-content: flex-start;
+    min-height: 40vh;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 1.5em;
   }
 
   .center {
@@ -328,5 +350,28 @@
 
   .bottom {
     font-size: 4vw;
+    position: relative;
+  }
+
+  .center > h1{
+    font-size: 1em;
+  }
+
+  .infoicon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #infoNotification{
+    position: absolute;
+    z-index: 3;
+    min-height: 100%;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+  }
+
+  #infoNotification > h2 {
+    font-size: 1.5em;
   }
 }

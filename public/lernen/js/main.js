@@ -20,7 +20,7 @@ function init(){
         cardArray.push(new Card('card'+(i+1),false, getCard[i]));
     }
 
-    document.querySelector(".field").addEventListener("click", function(){
+    document.querySelector(".fieldContainer").addEventListener("click", function(){
         if(!gameStarted){
             start();
             gameStarted = true;
@@ -164,4 +164,8 @@ function turnBack(id1, id2) {
 
 function checkCards(card1, card2) {
     return card1 == pairs[card2].toString() && card2 == pairs[card1].toString();
+}
+
+function toggleInfo(){
+    document.getElementById("infoNotification").classList.toggle("is-hidden");
 }

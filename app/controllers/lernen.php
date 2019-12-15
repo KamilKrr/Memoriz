@@ -23,10 +23,13 @@ class Lernen extends Controller{
         $this->view('template/header', $baseInfo);
 
         $name = $this->MemorySet->getNameOfMemorySet($memorySet);
+        $info = $this->MemorySet->getInfoOfMemorySet($memorySet);
+        
 
         if($name != "NOT FOUND"){
             $memoryInfo = array(
                 'name' => $name,
+                'info' => $info,
                 'getCards' => function() use ($memorySet){
                     $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
                     shuffle($cards);

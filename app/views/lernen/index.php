@@ -17,25 +17,35 @@
     <div class="contentMem">
         <div class="fieldContainer">
             <div class="field-center" id="cardBoard">
-                <?php $getCards()?>
+                <?php $getCards() ?>
             </div>
         </div>
         <div class="stats">
-            <div class="center">
-                <span><?= $name?></span>
-                <div class="clock" id="clock">
-                    <span id="time"></span>
-                </div>
+            <span class="infoicon icon is-large is-hidden-tablet is-hidden-desktop is-hidden-widescreen" onclick="toggleInfo()">
+                <i class="fas fa-2x fa-info-circle"></i>
+            </span>
+            <div class="notification is-primary is-hidden" id="infoNotification">
+                <button class="delete" onclick="toggleInfo()"></button>
+                <h2>Info</h2>
+                <span><?= $info ?></span>
             </div>
+            <div class="center">
+                <h1><?= $name ?></h1>
+            </div>
+            <div class="info is-hidden-mobile">
+                <h2>Info</h2>
+                <span><?= $info ?></span>
+            </div>
+
 
             <div class="bottom">
                 <div class="turns" id="turns">
                     <span>0</span>
                     <span>Züge</span>
                 </div>
-                <div class="trys">
-                    <span>0</span>
-                    <span>Versuche</span>
+                <div class="clock" id="clock">
+                    <span id="time"></span>
+                    <span>Zeit</span>
                 </div>
                 <div class="correct" id="correct">
                     <span>0</span>
