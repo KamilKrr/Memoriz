@@ -15,6 +15,21 @@ class MemorySet extends Model{
 
         return $memoryName;
     }
+
+    function getInfoOfMemorySet($memorySetLink){
+        $stmt = $this->db->prepare("SELECT beschreibung FROM memoryset WHERE link = :link");
+        $stmt->execute(array(":link" => $memorySetLink));
+
+        if(!$stmt->rowCount()>0){
+            return "NOT FOUND";
+        }
+
+        $memorySetRow = $stmt->fetch();
+
+        $memoryName = $memorySetRow['beschreibung'];
+
+        return $memoryName;
+    }
     
     function get8RandomFromMemorySet($memorySetLink){
         $memorySetFile = $this->getMemorySetFile($memorySetLink);

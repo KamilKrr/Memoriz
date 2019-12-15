@@ -54,8 +54,8 @@ Lerne jetzte für deine nächsten Tests mit Memoriz!">
     <meta name="msapplication-TileImage" content="/public/icons/ms-icon-144x144.png">
 </head>
 
-<body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top" id="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://memoriz.it">
                 <img src="/public/images/memoriz_logo.png" width="112" height="28" alt="Official Memoriz Text Logo">

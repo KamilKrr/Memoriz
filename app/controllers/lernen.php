@@ -22,6 +22,8 @@ class Lernen extends Controller{
         
 
         $name = $this->MemorySet->getNameOfMemorySet($memorySet);
+        $info = $this->MemorySet->getInfoOfMemorySet($memorySet);
+        
 
         if($name != "NOT FOUND"){
 
@@ -33,8 +35,14 @@ class Lernen extends Controller{
 
             $memoryInfo = array(
                 'name' => $name,
+<<<<<<< HEAD
                 'getCards' => function() use ($cards){
 
+=======
+                'info' => $info,
+                'getCards' => function() use ($memorySet){
+                    $cards = $this->MemorySet->get8RandomFromMemorySet($memorySet);
+>>>>>>> 1c78c40711ddc32ccd246e96248cd6334a6ef7ce
                     shuffle($cards);
                     foreach($cards as $card){
                         $memoryKarteInfo = array(
