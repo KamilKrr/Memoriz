@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/public/lernen/css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
-<section class="section" id="maingame">
+<section id="maingame">
     <div id="gamecomplete" class="hide">
         <div>
             <h2>Herzlichen Glückwunsch</h2>
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="contentMem">
-        <div class="field">
+        <div class="fieldContainer">
             <div class="field-center" id="cardBoard">
                 <?php $getCards()?>
             </div>

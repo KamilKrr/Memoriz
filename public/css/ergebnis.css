@@ -17,6 +17,8 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    padding: .2em;
+    cursor: pointer;
 }
 
 
@@ -30,6 +32,40 @@
     margin-left: -5vw;
     transform: translate(0, 2vw);
     box-shadow: -29px 0px 76px -15px rgba(0,0,0,0.31);
+}
+
+.memory-card:first-child:hover{
+    animation: changeLayer 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.memory-card:first-child::after{
+    animation: changeLayer 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+    
+}
+
+@keyframes changeLayer {
+    0%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(-4vw,0);
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    100%{
+        transform: translate(0,0);
+        z-index: 1;
+        box-shadow: -29px 0px 76px -15px rgba(0,0,0,0.31);
+    }
 }
 
 .info-text{

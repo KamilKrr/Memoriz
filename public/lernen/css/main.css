@@ -1,3 +1,5 @@
+
+
 #maingame{
   background-color: #e7e7e7;
   font-size: .8em;
@@ -13,7 +15,7 @@
   flex-direction: row;
 }
 
-.field {
+.fieldContainer {
   position: relative;
   width: 60vw;
   height: 92vh;
@@ -23,6 +25,7 @@
   justify-content: center;
 
   align-items: center;
+
 
 
 }
@@ -61,7 +64,7 @@
   top: 0;
   left: 0;
   border-radius: 7%;
-  background-image: url("/public/toft/resources/card_blue.png");
+  background-image: url("/public/lernen/resources/card_purple.png");
   background-size: cover;
   background-color: white;
   position: relative;
@@ -106,7 +109,7 @@
   
   left: -.3vw;
   top: -.3vw;
-  box-shadow: 0px 0px 5px 5px rgb(85, 228, 157);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.445);
   transition: 0.3s;
   margin: 0;
 }
@@ -290,9 +293,11 @@
     width: 100vw;
   }
 
-  .field {
+  .fieldContainer {
     width: 100%;
     height: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   .field-center {
