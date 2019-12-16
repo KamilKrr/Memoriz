@@ -24,7 +24,7 @@
 
             <div class="column column is-half is-offset-one-quarter">
 
-                <form method="post" action="http://memoriz.it/erstellen" enctype="multipart/form-data">
+                <form method="post" action="https://memoriz.it/erstellen" enctype="multipart/form-data">
                     <div class="field">
                         <div class="memoryFileUpload file is-centered is-boxed is-primary has-name">
                             <label class="file-label">
@@ -55,6 +55,7 @@
                         <button type="submit" name="submitFile" class="button is-primary">Erstellen</button>
                     </div>
                 </form>
+                <hr>
                 <div class="is-link has-text-centered">
                     <a href="https://memoriz.it/erstellen/datei_upload/anleitung">Wie erstellt man eine Memoryset
                         Datei?</a>

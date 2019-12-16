@@ -1,0 +1,16 @@
+.changeMode > a{
+    width: 48px;
+}
+.memory-text-input{
+    margin-bottom: 0 !important;
+}
+.memoryKarteInput .memory-bild-input{
+    display: none !important;
+}
+.memoryKarteInput.memory-bild-input-mode .memory-bild-input{
+    display: flex !important;
+}
+
+.memoryKarteInput.memory-bild-input-mode .memory-text-input{
+    display: none !important;
+}
