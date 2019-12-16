@@ -85,11 +85,12 @@ a.navbar-item.is-active {
   background-color: rgba(0, 0, 0, 0);
 }
 
+
+
 @media only screen and (max-width: 767px) {
-  .navbar-menu {
-    background-color: #481497 !important;
-  }
-  
+  .navbar-menu-inv {
+  background-color: #481497 !important;
+}
   .heading > div{
     margin: 1vw 5vw 1vw 5vw;
   }
@@ -117,7 +118,7 @@ a.navbar-item.is-active {
 }
 
 @media only screen and (max-width: 1023px){
-  .navbar-menu {
+  .navbar-menu-inv {
     background-color: #481497 !important;
   }
 }

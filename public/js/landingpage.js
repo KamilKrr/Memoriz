@@ -3,6 +3,7 @@ var burger = document.getElementsByClassName("burger")[0];
 var logo = document.getElementsByClassName("navbar-brand")[0];
 var items = document.getElementsByClassName("navbar-item");
 var isActive = document.getElementsByClassName("is-active")[0];
+var modules = document.getElementById("MemorizNavbar");
 var isInv = true;
 var bgIsInv = true;
 var breakpoint = 100;
@@ -37,7 +38,8 @@ function colorChange(){
     burger.classList.toggle("burger-inv");
     logo.classList.toggle("logo-inv");
     isActive.classList.toggle("is-active-inv");
-    navbar.classList.toggle("navbar-inv")
+    navbar.classList.toggle("navbar-inv");
+    modules.classList.toggle("navbar-menu-inv");
     let x;
     for(x of items){
         x.classList.toggle("navbar-item-inv");
@@ -88,7 +90,6 @@ var rocket = (x) => {
         var container = document.getElementById("trim-container");
         let pos = parseInt(window.getComputedStyle(container).getPropertyValue("top"));
         container.setAttribute("style", `top: ${-x/2}px`);
-        console.log(pos);
         currentPos = x;
         top = pos;
     }
@@ -97,7 +98,6 @@ var rocket = (x) => {
         var container = document.getElementById("trim-container");
         let pos = parseInt(window.getComputedStyle(container).getPropertyValue("top"));
         container.setAttribute("style", `top: ${top + top-x/2}px`);
-        console.log(pos); 
         currentPos = x;
     }
     
