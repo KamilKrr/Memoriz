@@ -55,6 +55,7 @@
                         <button type="submit" name="submitFile" class="button is-primary">Erstellen</button>
                     </div>
                 </form>
+                <hr>
                 <div class="is-link has-text-centered">
                     <a href="https://memoriz.it/erstellen/datei_upload/anleitung">Wie erstellt man eine Memoryset
                         Datei?</a>

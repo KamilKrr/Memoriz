@@ -13,7 +13,7 @@ class MemorySet extends Model{
 
         $memorySetRow = $stmt->fetch();
 
-        $info = array($memorySetRow['name'], $memorySetRow['beschreibung']);
+        $info = array($this->escapeHTML($memorySetRow['name']), $this->escapeHTML($memorySetRow['beschreibung']));
 
         return $info;
     }
@@ -39,7 +39,11 @@ class MemorySet extends Model{
             }
             $memoryPair = explode($explodeToken, $line);
 
-            array_push($allPairs, $memoryPair);
+
+            array_push($allPairs, array(
+                $this->escapeHTML($memoryPair[0]), 
+                $this->escapeHTML($memoryPair[1])
+            ));
         }
 
         if(count($allPairs) < 8){
@@ -173,6 +177,10 @@ class MemorySet extends Model{
         }
 
         return $randomLink;
+    }
+
+    private function escapeHTML($html){
+        return htmlspecialchars($html);
     }
 }
 

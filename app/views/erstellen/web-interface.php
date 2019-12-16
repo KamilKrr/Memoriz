@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="/public/css/erstellen/style.css">
+
 <section class="section">
-    
+
     <h2 class="title">Eigenes Memory-Set erstellen</h2>
 
     <div class="tabs is-centered is-boxed is-medium">
@@ -50,69 +52,86 @@
                         1
                     </div>
                 </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Karte 1">
+                <div class="column memoryKarteInput">
+                    <div class="field has-addons memory-text-input">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text von Karte 1">
+                        </div>
+                        <div class="control changeMode">
+                            <a class="button is-primary">
+                                <i class="far fa-image"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="field has-addons memory-bild-input">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Bildbeschreibung">
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Bildadresse">
+                        </div>
+                        <div class="control changeMode">
+                            <a class="button is-primary">
+                                <i class="fas fa-font"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column memoryKarteInput memory-bild-input-mode">
+                    <div class="field has-addons memory-text-input">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text von Karte 2">
+                        </div>
+                        <div class="control changeMode">
+                            <a class="button is-primary">
+                                <i class="far fa-image"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="field has-addons memory-bild-input">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Bildbeschreibung">
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Bildadresse">
+                        </div>
+                        <div class="control changeMode">
+                            <a class="button is-primary">
+                                <i class="fas fa-font"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="control">
-                        <input class="input" type="text" placeholder="Karte 2">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
+                        <input class="input" type="text" placeholder="Beschreibung von Paar 1">
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="field columns memory-paar-erstellen">
-                <div class="column is-1">
-                    <div class="content">
-                        2
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Karte 1">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Karte 2">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
-                    </div>
+
+            <div class="column column is-half is-offset-one-quarter">
+                <div class="buttons is-centered">
+                    <button type="submit" name="submitFile" class="button is-primary">Erstellen</button>
                 </div>
             </div>
-            <hr>
-            <div class="field columns memory-paar-erstellen">
-                <div class="column is-1">
-                    <div class="content">
-                        3
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Karte 1">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Karte 2">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Beschreibung (Optional)">
-                    </div>
-                </div>
-            </div>
-            <hr>
         </form>
     </section>
 </section>
+
+<script>
+
+const $changeModeButtons = Array.prototype.slice.call(document.querySelectorAll('.changeMode a'), 0);
+
+  if ($changeModeButtons.length > 0) {
+    $changeModeButtons.forEach(component => {
+        component.addEventListener("click", event => {
+            event.currentTarget.parentElement.parentElement.parentElement.classList.toggle("memory-bild-input-mode");
+        });
+    });
+  }
+
+
+</script>
