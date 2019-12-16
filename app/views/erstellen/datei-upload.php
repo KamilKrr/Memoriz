@@ -24,7 +24,7 @@
 
             <div class="column column is-half is-offset-one-quarter">
 
-                <form method="post" action="http://memoriz.it/erstellen" enctype="multipart/form-data">
+                <form method="post" action="https://memoriz.it/erstellen" enctype="multipart/form-data">
                     <div class="field">
                         <div class="memoryFileUpload file is-centered is-boxed is-primary has-name">
                             <label class="file-label">
