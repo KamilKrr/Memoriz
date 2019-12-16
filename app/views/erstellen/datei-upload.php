@@ -2,7 +2,7 @@
 
     <h2 class="title">Eigenes Memory-Set erstellen</h2>
 
-    <div class="tabs is-centered is-boxed is-medium">
+    <div class="tabs is-centered is-boxed is-small">
         <ul>
             <li class="is-active">
                 <a href="https://memoriz.it/erstellen/datei_upload">

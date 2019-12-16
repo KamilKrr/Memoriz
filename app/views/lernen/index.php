@@ -6,12 +6,35 @@
     <div id="gamecomplete" class="hide">
         <div>
             <h2>Herzlichen Glückwunsch</h2>
-            <p>Du hast das TOFT Memory geschafft und dich ein bisschen mit unserer Schule vertraut gemacht.</p>
+            <p>Du hast das <?= $name ?> Memory geschafft!</p>
             <p>Deine Zeit:</p>
             <div class="clock" id="clock2">
                 <span id="time2"></span>
             </div>
-            <button type="submit" value="Neustart" onClick="window.location.reload();">Neustart</button>
+            <p>
+                </br>Eine detailiertere Ansicht der Kartenpaare findest du hier:
+            </p>
+            <div class="info-button">
+                <a href="https://memoriz.it/ergebnis"><button class="button is-block is-primary is-outlined" value="info">
+                        <span class="icon">
+                            <i class="fas fa-info"></i>
+                        </span>
+                        <span>
+                            INFO
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+
+            <a href="https://memoriz.it/kategorie" class="is-primary">
+                <span class="icon back-arrow is-large">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </span>
+            </a>
+
+
+
         </div>
     </div>
     <div class="contentMem">

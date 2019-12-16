@@ -230,6 +230,16 @@
   background-color: rgba(0, 0, 0, .4);
 }
 
+.info-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.back-arrow{
+  margin-top: 7em;
+}
+
 #gamecomplete>div {
   width: 60vw;
   height: 80vh;
@@ -253,23 +263,10 @@
   margin: 0 2vw 0 2vw;
 }
 
-#gamecomplete>div>button {
-  width: 12vw;
-  height: 4vw;
-  margin-top: 6vw;
-  border-radius: 2vw;
-  font-size: 1.2em;
-  border: 2px solid #330080;
-  color: #330080;
-  cursor: pointer;
-  background-color: #ffffff;
+#time2{
+  font-size: 2em;
 }
 
-#gamecomplete>div>button:hover {
-  background-color: #330080;
-  color: #ffffff;
-  transition: .3s;
-}
 
 .hide {
   visibility: hidden;
@@ -289,6 +286,23 @@
 
 
 @media only screen and (max-width: 768px) {
+
+
+  #gamecomplete>div {
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw 10vh 10vw;
+  }
+
+  #gamecomplete>div>h2 {
+    font-size: 2em;
+  }
+
+  #gamecomplete>div>p {
+    padding: 2vh;
+    font-size: 1.2em;
+    margin: 1vw 1vw 1vw 1vw;
+  }
 
   #maingame{
     min-height: calc(100vh - 52px);
