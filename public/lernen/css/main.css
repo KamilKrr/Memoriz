@@ -133,19 +133,19 @@
 }
 
 .center > h1{
-  font-size: 3em;
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
 .info{
  text-align: left;
- margin: 4vw;
+ margin: 2vw 4vw 4vw 4vw;
  font-size: 1.5em;
 }
 
 .info > h2{
   color: #330080;
-  font-size: 1.7em;
+  font-size: 2.3vw;
   font-weight: bold;
 }
 
@@ -354,14 +354,18 @@
   }
 
   .center > h1{
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .infoicon{
     position: absolute;
     right: 0;
     top: 0;
+    cursor: pointer;
+    color: #330080;
   }
+
+
 
   #infoNotification{
     position: absolute;

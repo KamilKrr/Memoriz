@@ -1,7 +1,25 @@
 <script type="text/javascript" src="/public/js/landingpage.js"></script>
 <link rel="stylesheet" href="/public/css/landingpage.css">
 
+<div>
+    <a class="bg-image-container" href="http://www.freepik.com">
+    <img src="/public/images/landingpage/landingpage.png" onload="getViewport()" id="bg-image" alt="Hintergrundbild Rakete">
+    <div id="trim-container">
+        <img src="/public/images/landingpage/landingpage-rocket.png" onload="getViewport()" id="rocket" alt="Hintergrundbild Rakete">
+    </div>
+    
+    </a>
+    <div class="heading" id="heading">
+        <div>
+            <h1 class="title has-text-primary" id="title">Memoriz - Deine Lernplattform</h1>
+            <h2 class="subtitle has-text-primary" id="subtitle">Lerne kinderleicht anhand unserer Memorys.</h2>
+        </div>
+        <button class="button is-primary is-outlined" id="loslegen">LOSLEGEN</button>
+
+    </div>
+</div>
 <section class="section">
+
     <div class="container hero learning">
         <div class="hero-body">
             <h1 class="title is-1-desktop is-spaced">Lernen</h1>

@@ -1,7 +1,119 @@
-.learning > div > div > a > button{
+.learning > div > div > a > button {
   margin-top: 1em;
 }
 
-.creating > div > div > a > button{
+.creating > div > div > a > button {
   margin-top: 1em;
+}
+
+.bg-image-container > img {
+  margin-top: -52px;
+  width: 100%;
+  height: 100%;
+}
+
+#trim-container{
+  position: absolute;
+  top: 0;
+}
+
+.navbar-inv {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.burger-inv {
+  color: #ffffff !important;
+}
+
+.navbar-item-inv {
+  color: #ffffff !important;
+  
+}
+
+.navbar-item-inv:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: #9872eb !important;
+}
+
+.is-active-inv {
+  color: #cccccc !important;
+}
+
+.is-active-inv:hover {
+  color: #9872eb !important;
+}
+
+.logo-inv {
+  filter: brightness(0) invert(100);
+}
+
+.heading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #330080;
+  z-index: 5;
+}
+
+.heading > div {
+  margin: 1vw 5vw 1vw 5vw;
+}
+
+.heading > button {
+  width: 12vw;
+  margin-left: 5vw;
+}
+
+#title {
+  font-size: 2.5vw;
+}
+
+#subtitle {
+  font-size: 1.5vw;
+}
+
+a.navbar-item.is-active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-menu {
+    background-color: #481497 !important;
+  }
+  
+  .heading > div{
+    margin: 1vw 5vw 1vw 5vw;
+  }
+  
+  #loslegen{
+    width: 30vw;
+    margin-left: 5vw;
+    margin-top: 10vw;
+  }
+
+  .heading{
+    margin: 0;
+    margin-top: -20vh;
+  }
+  
+  #title{
+    font-size: 3em;
+    color: #ffffff !important;
+  }
+  
+  #subtitle{
+    font-size: 1.5em;
+    color: #ffffff !important;
+  }
+}
+
+@media only screen and (max-width: 1023px){
+  .navbar-menu {
+    background-color: #481497 !important;
+  }
 }
