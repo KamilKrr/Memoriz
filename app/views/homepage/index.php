@@ -3,11 +3,11 @@
 
 <div>
     <a class="bg-image-container" href="http://www.freepik.com">
-    <img src="/public/images/landingpage/landingpage.png" onload="getViewport()" id="bg-image" alt="Hintergrundbild Rakete">
-    <div id="trim-container">
-        <img src="/public/images/landingpage/landingpage-rocket.png" onload="getViewport()" id="rocket" alt="Hintergrundbild Rakete">
-    </div>
-    
+        <img src="/public/images/landingpage/landingpage.png" onload="getViewport()" id="bg-image" alt="Hintergrundbild Rakete">
+        <div id="trim-container">
+            <img src="/public/images/landingpage/landingpage-rocket.png" onload="getViewport()" id="rocket" alt="Hintergrundbild Rakete">
+        </div>
+
     </a>
     <div class="heading" id="heading">
         <div>

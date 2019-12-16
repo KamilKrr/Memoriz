@@ -27,6 +27,8 @@ function getViewport(){
         document.getElementById("loslegen").classList.toggle("is-white");
         
         currentVP = intViewportWidth;
+    }else if(intViewportWidth < 768){
+        isMobile = true;
     }
 }
 
@@ -103,6 +105,7 @@ var rocket = (x) => {
 
 document.addEventListener("DOMContentLoaded", function(event){
     colorChange();
+    getViewport();
     resizeHeading();
 });
 

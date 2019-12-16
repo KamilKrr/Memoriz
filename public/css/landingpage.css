@@ -77,6 +77,10 @@
   font-size: 1.5vw;
 }
 
+#loslegen{
+  margin-left: 5vw;
+}
+
 a.navbar-item.is-active {
   background-color: rgba(0, 0, 0, 0);
 }
