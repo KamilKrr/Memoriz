@@ -4,7 +4,7 @@
         <div class="column">
             <p class="subtitle is-3">Kamil Kruk</p>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Bild: Kamil Kruk">
+                <img class="is-rounded" src="/public/images/team/Kamil.png" alt="Bild: Kamil Kruk">
             </figure>
             <div>
                 Projektleiter, Back-End Developer
@@ -13,7 +13,7 @@
         <div class="column">
             <p class="subtitle is-3">Tim Schreiber</p>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"
+                <img class="is-rounded" src="/public/images/team/Tim.png"
                     alt="Bild: Tim Schreiber">
             </figure>
             <div>
@@ -23,7 +23,7 @@
         <div class="column">
             <p class="subtitle is-3">Klaus Pecina</p>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Bild: Klaus Pecina">
+                <img class="is-rounded" src="/public/images/team/Klaus.png" alt="Bild: Klaus Pecina">
             </figure>
             <div>
                 Projektmitarbeiter, Content Developer
@@ -32,7 +32,7 @@
         <div class="column">
             <p class="subtitle is-3">Christof Parth</p>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png"
+                <img class="is-rounded" src="/public/images/team/Christof.png"
                     alt="Bild: Christof Parth">
             </figure>
             <div>
