@@ -24,5 +24,10 @@
         <p>
         Die Autoren sind bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken und Texte zu beachten, von ihnen selbst erstellte Grafiken und Texte zu nutzen oder auf lizenzfreie Grafiken und Texte zurückzugreifen. Sollte sich auf den jeweiligen Seiten dennoch eine ungekennzeichnete, aber durch fremdes Copyright geschützte Grafik oder Text befinden, so konnte das Copyright vom Autor nicht festgestellt werden. Im Falle einer solchen unbeabsichtigten Copyrightverletzung wird das entsprechende Objekt nach Benachrichtigung entfernt bzw. mit dem entsprechenden Copyright kenntlich machen. Das Copyright für veröffentlichte, von den Autoren selbst erstellte Objekte bleibt allein beim jeweiligen Autor. Eine Vervielfältigung oder Verwendung solcher Grafiken oder Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des jeweiligen Autors nicht gestattet.
         </p>
+
+        <h3 class="subtitle">Quellen</h3>
+        <p>
+        Um die ideale lernerfahrung zu ermöglichen, verwenden wird Bilder von Wikipedia.
+        </p>
     </div>
 </section>

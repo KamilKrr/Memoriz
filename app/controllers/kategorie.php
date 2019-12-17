@@ -57,7 +57,7 @@ class Kategorie extends Controller{
                 'name' => $memory['name'],
                 'kategorie' => $memory['kategorie_name'],
                 'jahrgang' => $memory['jahrgang'],
-                'beschreibung' => $memory['beschreibung'],
+                'beschreibung' => nl2br($this->MemorySet->escapeHTML($memory['beschreibung'])),
                 'autor' => $memory['autor'],
                 'tags' => $memory['tags'],
                 'link' => $memory['link'],

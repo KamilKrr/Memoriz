@@ -13,7 +13,7 @@ class MemorySet extends Model{
 
         $memorySetRow = $stmt->fetch();
 
-        $info = array($this->escapeHTML($memorySetRow['name']), $this->escapeHTML($memorySetRow['beschreibung']));
+        $info = array($this->escapeHTML($memorySetRow['name']), nl2br($this->escapeHTML($memorySetRow['beschreibung'])));
 
         return $info;
     }
@@ -41,8 +41,9 @@ class MemorySet extends Model{
 
 
             array_push($allPairs, array(
-                $this->escapeHTML($memoryPair[0]), 
-                $this->escapeHTML($memoryPair[1])
+                $this->escapeHTML($memoryPair[0]),
+                $this->escapeHTML($memoryPair[1]),
+                $this->escapeHTML($memoryPair[2] ?? null) 
             ));
         }
 
@@ -97,7 +98,7 @@ class MemorySet extends Model{
         $data = "";
         if(preg_match("/\((.*)\)\[(.*)\]/", $content, $data)){
             $result = "<p><img src='$data[2]' alt='$data[1]'></p>";
-        }else if(preg_match("/<#(.*)>/", $content, $data)){
+        }else if(preg_match("/&lt;#(.*)&gt;/", $content, $data)){
             $result = "<span class='colorMemory' style='display: block; width: 100%; height: 100%; background: #" . $data[1] . ";'></span>";
         }else{
             $result = "<p>" . $content . "</p>";
@@ -179,7 +180,7 @@ class MemorySet extends Model{
         return $randomLink;
     }
 
-    private function escapeHTML($html){
+    public function escapeHTML($html){
         return htmlspecialchars($html);
     }
 }
