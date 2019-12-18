@@ -11,8 +11,19 @@
             <div class="clock" id="clock2">
                 <span id="time2"></span>
             </div>
+
+            <h4>Eure Meinung ist gefragt!</h4>
             <p>
-                </br>Eine detailiertere Ansicht der Kartenpaare findest du hier:
+                Wir sind gerade in der Entwicklungsphase und würden uns sehr über euer Feedback freuen.
+            </p>
+            <p>
+                Das Formular dauert nicht lange und hilft uns sehr Memoriz zu verbessern.
+                <br>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=EDLCnlcOnkC-rAXnVeo92Av6sS-lLdVIsWJ6AlfeUMZUOEpUVDlJTDVDTFc2N1o1TFdDVDFTNUtFTC4u" target="_blank">Zum Feedback Formular</a>
+            </p>
+
+            <p>
+                <br>Eine detailiertere Ansicht der Kartenpaare findest du hier:
             </p>
             <div class="info-button">
                 <a href="https://memoriz.it/ergebnis"><button class="button is-block is-primary is-outlined" value="info">
@@ -26,14 +37,11 @@
                 </a>
             </div>
 
-
             <a href="https://memoriz.it/kategorie" class="is-primary">
                 <span class="icon back-arrow is-large">
-                    <i class="fas fa-arrow-left fa-2x"></i>
+                    <i class="fas fa-arrow-left fa-2x"></i>Zurück
                 </span>
             </a>
-
-
 
         </div>
     </div>
