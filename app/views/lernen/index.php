@@ -56,7 +56,7 @@
                 <h1><?= $name ?></h1>
             </div>
             <div class="info is-hidden-mobile">
-                <h2>Info</h2>
+                <h2><?= $info ? "Info" : ""?></h2>
                 <span><?= $info ?></span>
             </div>
 

@@ -15,9 +15,11 @@ class Lernen extends Controller{
 
         $this->model("MemorySet");
 
+        /*
         if($memorySet == "toft"){
             header("Location: https://memoriz.it/toft");
         }
+        /**/
 
         $info = $this->MemorySet->getInfoOfMemorySet($memorySet);
 
