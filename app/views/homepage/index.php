@@ -24,10 +24,10 @@
         <div class="hero-body">
             <h1 class="title is-1-desktop is-spaced">Lernen</h1>
             <h2 class="subtitle is-4-desktop">
-                Memoriz eignet sich perfekt für zum <strong>Lernen für die Schule</strong>.
+                Memoriz eignet sich perfekt um für <strong>die Schule zu Lernen</strong>.
             </h2>
             <p class="is-size-5-desktop">
-                Spiele jetzt eines der unzählige existierenden Memorys, für Zahlreiche Stoffgebiete wie Chemie, Physik, Softwareentwicklung, ...
+                Spiele jetzt eines der unzähligen Memorys, für Zahlreiche Stoffgebiete wie Chemie, Physik, Softwareentwicklung, ...
                 und bereite dich somit für deine nächste Schularbeit, Test oder Stundenwiederholung vor.
             </p>
             <div>
@@ -39,10 +39,10 @@
         <div class="hero-body">
             <h1 class="title is-1-desktop is-spaced">Erstellen</h1>
             <h2 class="subtitle is-4-desktop">
-                Ein Thema das fehlt? Kein Problem! <strong>Erstelle jetzt dein eigenes Memoryset</strong> und übe so lange und oft du willst!
+                Ein Thema das fehlt? Kein Problem! <strong>Erstelle jetzt dein eigenes Memoryset</strong> und übe so oft du willst!
             </h2>
             <p class="is-size-5-desktop">
-                Erstelle dein eigenes Memoryset und spiele es immer und überall durch einen, von uns generierten, persönlichen Link.
+                Noch nie war es so leicht eigene Memorys zu erstellen! Spiele immer und überall durch einen, von uns generierten, persönlichen Link.
                 Teile diesen Link mit anderen, damit auch sie mit deinem Memory lernen können.
             </p>
             <div>

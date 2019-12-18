@@ -4,8 +4,8 @@
                 <p class="title is-4 is-spaced">Über</p>
                 <hr>
                 <p>
-                    Memoriz - Ein Projekt der 4. Klasse der <a href="https://www.htl.rennweg.at/" target="_blank">HTL Rennweg</a> <br> Memoriz ist eine Memory-basierte
-                    Lernplattform mit der SchülerInnen spielerisch Vokabeln und andere Schulische Sachen lernen können.<br>
+                    Memoriz - Ein Projekt der 4. Klasse der <a href="https://www.htl.rennweg.at/" target="_blank">HTL Rennweg</a>. <br> Memoriz ist eine Memory-basierte
+                    Lernplattform, mit der SchülerInnen spielerisch in schulischen Themenbereichen lernen können.<br>
                     Die Lernplattform wird als Projektarbeit im Wintersemester 2019 entwickelt.
                 </p>
             </div>
