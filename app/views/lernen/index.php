@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
 <section id="maingame">
-    <div id="gamecomplete" class="hide">
+    <div id="gamecomplete" class="">
         <div>
             <h2>Herzlichen Glückwunsch</h2>
             <p>Du hast das <?= $name ?> Memory geschafft!</p>
@@ -11,16 +11,6 @@
             <div class="clock" id="clock2">
                 <span id="time2"></span>
             </div>
-
-            <h4>Eure Meinung ist gefragt!</h4>
-            <p>
-                Wir sind gerade in der Entwicklungsphase und würden uns sehr über euer Feedback freuen.
-            </p>
-            <p>
-                Das Formular dauert nicht lange und hilft uns sehr Memoriz zu verbessern.
-                <br>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=EDLCnlcOnkC-rAXnVeo92Av6sS-lLdVIsWJ6AlfeUMZUOEpUVDlJTDVDTFc2N1o1TFdDVDFTNUtFTC4u" target="_blank">Zum Feedback Formular</a>
-            </p>
 
             <p>
                 <br>Eine detailiertere Ansicht der Kartenpaare findest du hier:
@@ -39,9 +29,18 @@
 
             <a href="https://memoriz.it/kategorie" class="is-primary">
                 <span class="icon back-arrow is-large">
-                    <i class="fas fa-arrow-left fa-2x"></i>Zurück
+                    <i class="fas fa-arrow-left fa-2x"></i>
                 </span>
             </a>
+
+            <h2>Eure Meinung zählt!</h2>
+            <p>
+                Wir sind gerade in der Entwicklungsphase und würden uns sehr über euer Feedback freuen.</br>
+                Das Formular dauert nicht lange und hilft uns sehr Memoriz zu verbessern.
+            </p>
+            <p>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=EDLCnlcOnkC-rAXnVeo92Av6sS-lLdVIsWJ6AlfeUMZUOEpUVDlJTDVDTFc2N1o1TFdDVDFTNUtFTC4u" target="_blank">Zum Feedback Formular</a>
+            </p>
 
         </div>
     </div>
@@ -64,7 +63,7 @@
                 <h1><?= $name ?></h1>
             </div>
             <div class="info is-hidden-mobile">
-                <h2><?= $info ? "Info" : ""?></h2>
+                <h2><?= $info ? "Info" : "" ?></h2>
                 <span><?= $info ?></span>
             </div>
 

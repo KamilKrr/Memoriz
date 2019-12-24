@@ -249,6 +249,7 @@
   border-radius: 1vw;
   text-align: center;
   z-index: 10;
+  overflow-y: scroll;
 }
 
 #gamecomplete>div>h2 {
@@ -292,6 +293,7 @@
     width: 80vw;
     height: 80vh;
     margin: 10vh 10vw 10vh 10vw;
+    overflow-y: scroll;
   }
 
   #gamecomplete>div>h2 {
